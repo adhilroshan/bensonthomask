@@ -19,7 +19,10 @@
 		? ''
 		: ''}"
 	id={index}
-	on:click={() => openPlaylist(playlist)}
+	on:click={() => {
+		openPlaylist(playlist);
+		// console.log(playlist.playlistId);
+	}}
 	on:keydown={(e) => {
 		if (e.key === 'Enter' || e.key === 'Space') {
 			openPlaylist(playlist);
