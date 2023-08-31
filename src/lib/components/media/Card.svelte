@@ -50,7 +50,7 @@
 			</div> -->
 		</div>
 		<div
-			class="hidden duration-300 transition-all group-hover:flex absolute top-0 left-0 w-full h-full rounded-lg backdrop-blur-sm"
+			class="hidden duration-300 transition-all group-hover:flex absolute top-0 left-0 w-full h-full rounded-lg backdrop-blur-sm bg-borderColor/50"
 		/>
 		<svg
 			class="hidden duration-300 transition-all z-10 group-hover:flex absolute left-0 right-0 mx-auto my-auto h-full drop-shadow-md"
