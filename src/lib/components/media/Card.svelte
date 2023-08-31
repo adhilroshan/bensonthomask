@@ -7,12 +7,18 @@
 	import * as Card from '$lib/components/ui/card';
 
 	export let playlist: Playlist;
+	export let idx: number;
+	let index = idx.toString();
+	// console.log(index);
 	export let openPlaylist: (playlist: Playlist) => void;
 </script>
 
 <div
-	class="m-3 flex flex-col group hover:cursor-pointer items-center justify-center w-full max-w-sm mx-auto"
-	id={playlist.playlistId}
+	class="m-3 flex flex-col group hover:cursor-pointer items-center justify-center w-full max-w-sm mx-auto {index ===
+	'0'
+		? ''
+		: ''}"
+	id={index}
 	on:click={() => openPlaylist(playlist)}
 	on:keydown={(e) => {
 		if (e.key === 'Enter' || e.key === 'Space') {

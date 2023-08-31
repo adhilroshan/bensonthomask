@@ -12,7 +12,7 @@
 
 	const API_KEY = 'AIzaSyBAdvoGy_Hg_VGTyOfiOo_QVpRw7xWL6XI';
 	const CHANNEL_ID = 'UCPoY5l3eAzBqeBJwT6iVhgw';
-	let maxResults = 30;
+	let maxResults = 40;
 	let nextPageToken = '';
 
 	async function fetchPlaylists() {
@@ -23,11 +23,31 @@
 			const data = await response.json();
 
 			if (data.items && data.items.length > 0) {
-				playlists = data.items.map((item: any) => ({
+				// Extract the playlists from the response
+				const fetchedPlaylists = data.items.map((item: any) => ({
 					playlistId: item.id,
 					playlistTitle: item.snippet.title,
 					playlistThumbnailUrl: item.snippet.thumbnails.medium.url
 				}));
+
+				// Sort the playlists based on your specified order
+				const sortOrder = [
+					'Music Video',
+					'ENGLISH CHRISTIAN WORSHIP - CHOIR',
+					'MINISTRY || TESTIMONY || SPEECH',
+					'ENGLISH CHRISTIAN HYMNS',
+					'MALAYALAM CHRISTIAN WORSHIP - CHOIR'
+				];
+
+				const sortedPlaylists = sortOrder.map((title) =>
+					fetchedPlaylists.find((playlist: Playlist) => playlist.playlistTitle.includes(title))
+				);
+				const remainingPlaylists = fetchedPlaylists.filter(
+					(playlist: Playlist) => !sortedPlaylists.includes(playlist)
+				);
+
+				playlists = sortedPlaylists.concat(remainingPlaylists);
+				console.log(playlists);
 
 				nextPageToken = data.nextPageToken || '';
 			}
@@ -45,8 +65,10 @@
 	}
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-[repeat(3,1fr)] gap-x-1 gap-y-1 place-items-center p-2.5">
-	{#each playlists as playlist}
+<div
+	class="grid grid-cols-1 md:grid-cols-[repeat(3,1fr)] gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24"
+>
+	{#each playlists as playlist, index}
 		<!-- <div
 			class="w-[var(--size)] relative overflow-hidden text-black cursor-pointer rounded-[2rem]"
 			style="transform: translateZ(0);"
@@ -71,7 +93,7 @@
 				<span>{playlist.playlistTitle}</span>
 			</span>
 		</div> -->
-		<Card {playlist} {openPlaylist} />
+		<Card {playlist} {openPlaylist} idx={index} />
 	{/each}
 </div>
 
