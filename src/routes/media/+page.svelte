@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Card from '$lib/components/media/Card.svelte';
 	import { onMount } from 'svelte';
 
 	interface Playlist {
@@ -46,7 +47,7 @@
 
 <div class="grid grid-cols-1 md:grid-cols-[repeat(3,1fr)] gap-x-1 gap-y-1 place-items-center p-2.5">
 	{#each playlists as playlist}
-		<div
+		<!-- <div
 			class="w-[var(--size)] relative overflow-hidden text-black cursor-pointer rounded-[2rem]"
 			style="transform: translateZ(0);"
 			role="button"
@@ -69,13 +70,14 @@
 			>
 				<span>{playlist.playlistTitle}</span>
 			</span>
-		</div>
+		</div> -->
+		<Card {playlist} {openPlaylist} />
 	{/each}
 </div>
 
 {#if selectedPlaylist}
 	<div
-		class="fixed w-full h-full bg-[rgba(0,0,0,0.8)] flex flex-col items-center justify-center left-0 top-0"
+		class="fixed w-full h-full bg-[rgba(0,0,0,0.8)] flex flex-col items-center z-40 justify-center left-0 top-0"
 	>
 		<iframe
 			title=""
