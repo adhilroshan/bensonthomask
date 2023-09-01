@@ -30,7 +30,7 @@
 		<img src={bgImg} class="h-full opacity-75 w-full -z-0 object-cover absolute" alt="" />
 		<!-- else content here -->
 	{/if}
-	<div class="mx-auto max-w-screen-xl">
+	<div class="absolute mx-auto max-w-screen-xl">
 		<div class=" flex md:flex-row flex-col h-full justify-between px-10 gap-8 items-center">
 			<div class="lg:order-last">
 				<!-- <div
@@ -59,7 +59,7 @@
 				<h2 class="text-3xl text-[{textColor}] font-bold sm:text-4xl">{title}</h2>
 
 				{#if description}
-					<p class="mt-4 text-gray italic text-ellipsis w-96">
+					<p class="mt-4 text-gray italic text-ellipsis md:w-96">
 						{description}
 					</p>
 				{/if}

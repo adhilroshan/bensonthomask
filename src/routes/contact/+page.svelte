@@ -8,7 +8,7 @@
 </script>
 
 <section
-	class=" m-12 mt-1 rounded-2xl pl-24 pr-16 min-h-screen bg-gradient-to-r from-blue-600 via-blue-800 to-blue-900 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"
+	class=" m-8 md:m-12 mt-1 rounded-2xl md:pl-24 md:pr-16 min-h-screen bg-gradient-to-r from-blue-600 via-blue-800 to-blue-900 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"
 >
 	<div class="container flex flex-col min-h-screen px-6 py-12 mx-auto">
 		<div class="flex-1 lg:flex lg:items-center lg:-mx-6">
@@ -192,9 +192,7 @@
 							/>
 						</div>
 						<div class="flex-1 mt-6">
-							<label class="block mb-2 text-sm text-gray-600 dark:text-gray-200"
-								>Phone</label
-							>
+							<label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Phone</label>
 							<input
 								type="tel"
 								placeholder="(257) 563-7401"

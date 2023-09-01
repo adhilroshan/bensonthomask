@@ -11,9 +11,9 @@
 	// });
 </script>
 
-<div class=" m-2 relative h-96 w-96">
+<div class="mx-4 md:mx-24 relative h-96 w-96">
 	<!-- {@html embedCode} -->
-	<iframe class="absolute w-full h-full" src={postUrl} width="500" height="500" frameborder="0" />
+	<iframe class="m-2 absolute w-full h-full" src={postUrl} frameborder="0" />
 </div>
 
 <style>

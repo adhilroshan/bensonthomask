@@ -40,17 +40,17 @@
 							style="inset: auto 0 0; "
 							class="border-b-4 border-r-4 border-borderColor z-30 aspect-square rounded-t-full absolute mix-blend-multiply mx-auto w-full object-cover"
 						/>
-						<img alt="Party" src={Headshot} class="relative z-20" />
+						<img alt="Headshot" src={Headshot} class="relative z-20" />
 					</div>
 				</div>
 			</div>
 
-			<div class="z-10 lg:pt-24">
-				<h2 class="text-3xl text-text font-bold sm:text-4xl">Hi I'm</h2>
-				<h2 class="text-3xl text-text font-bold sm:text-4xl">{tagline}</h2>
+			<div class="z-10 lg:pt-24 mx-auto">
+				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">Hi I'm</h2>
+				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">{tagline}</h2>
 
 				{#if description}
-					<p class="mt-4 text-gray text-ellipsis w-96 font-lora">
+					<p class="mt-4 text-gray text-ellipsis md:w-96 font-lora">
 						{description}
 					</p>
 				{/if}
