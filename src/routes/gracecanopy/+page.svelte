@@ -1,12 +1,24 @@
 <script lang="ts">
-	import PageHeader from '$lib/components/global/PageHeader.svelte';
 	import InstagramPost from './../../lib/components/gracecanopy/InstagramPost.svelte';
 	import { onMount } from 'svelte';
 
 	export let apiKey = 'AIzaSyBAdvoGy_Hg_VGTyOfiOo_QVpRw7xWL6XI'; // Your YouTube Data API key
 	export let playlistId = 'PLI1cvwejI5Sth63AUaRXTlfPtt59o2Jwt'; // ID of the YouTube playlist
-
-	let playlistItems = [];
+	type YoutubePlaylistItem = {
+		id: string;
+		snippet: {
+			title: string;
+			thumbnails: {
+				default: {
+					url: string;
+				};
+			};
+			resourceId: {
+				videoId: string;
+			};
+		};
+	};
+	let playlistItems: YoutubePlaylistItem[] = [];
 
 	onMount(async () => {
 		const response = await fetch(
@@ -25,6 +37,7 @@
 	{#each playlistItems as item (item.id)}
 		<div class="m-2 w-auto h-auto md:w-[24rem] video-card aspect-video">
 			<iframe
+				title=""
 				class="rounded-lg w-full"
 				height="250"
 				src={getYoutubeEmbedUrl(item.snippet.resourceId.videoId)}
@@ -41,7 +54,3 @@
 	<InstagramPost postUrl="https://www.instagram.com/p/B-Xpa7Fh43c/embed/" />
 	<InstagramPost postUrl="https://www.instagram.com/p/CAjVwmQBisi/embed/" />
 </div>
-
-<style>
-	/* Add your styles for the video cards here */
-</style>
