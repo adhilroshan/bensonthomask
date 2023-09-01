@@ -60,7 +60,9 @@
 	</div>
 </div>
 <!-- PLUhJyvkLp-rOWUDtYfsacytiHts2TV2mY -->
-<h1 class="font-semibold p-12 pl-28 text-bgc text-2xl">Church Fellowship &amp; Ministry</h1>
+<h1 class="font-semibold p-12 md:pl-28 text-bgc text-xl md:text-2xl">
+	Church Fellowship &amp; Ministry
+</h1>
 <div class="grid grid-cols-1 mt-4 md:grid-cols-3 gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24">
 	{#each playlistItems as item (item.id)}
 		<div class="m-2 w-auto h-auto md:w-[24rem] video-card aspect-video">
@@ -79,9 +81,11 @@
 	<!-- <iframe src="https://www.instagram.com/p/B-Xpa7Fh43c/embed/" width="320" height="440" />
 	<iframe src="https://www.instagram.com/p/B-Xpa7Fh43c/embed/" width="320" height="440" /> -->
 </div>
-<h1 class="font-semibold p-12 pl-28 text-bgc text-2xl">Church Fellowship &amp; Ministry [Reels]</h1>
+<h1 class="font-semibold p-12 md:pl-28 text-bgc text-xl md:text-2xl">
+	Church Fellowship &amp; Ministry [Reels]
+</h1>
 <div class="grid grid-cols-1 mt-4 md:grid-cols-3 gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24">
-	{#each reels as item }
+	{#each reels as item}
 		<div class="m-2 w-auto h-auto md:w-[24rem] video-card aspect-video">
 			<iframe
 				title=""
