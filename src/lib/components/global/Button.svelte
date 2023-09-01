@@ -32,7 +32,7 @@
 {:else if variant == Variant.outline}
 	<Button
 		{href}
-		class="inline-block rounded-none py-auto rounded-tl-md rounded-br-md border-2 border-borderColor bg-bgc  px-6 md:px-8 text-sm font-medium text-borderColor  hover:bg-borderColor hover:text-bgc focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 active:scale-95 transition-all duration-150 {className}"
+		class="inline-block rounded-none py-auto rounded-tl-lg rounded-br-lg border-2 border-borderColor bg-bgc  px-6 md:px-8 text-sm font-medium text-borderColor  hover:bg-borderColor hover:text-bgc focus:outline-none focus:ring focus:ring-yellow-400 hover:scale-105 active:scale-95 transition-all duration-150 {className}"
 	>
 		<slot />
 		<!-- {btnText} -->

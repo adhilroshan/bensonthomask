@@ -10,5 +10,5 @@
 <Hero />
 <Services />
 <Events />
-<Events />
+<Events reverse />
 <Events />

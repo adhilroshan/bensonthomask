@@ -17,7 +17,9 @@
 	};
 </script>
 
-<section class="m-6 md:m-12 mt-1 rounded-2xl bg-bgc max-h-screen min-h-fit shadow-lg shadow-borderColor">
+<section
+	class="relative m-6 md:m-12 mt-1 rounded-2xl bg-bgc max-h-screen min-h-fit shadow-lg shadow-borderColor"
+>
 	<!-- <img src={Bg} class="h-[70vh] opacity-5 grayscale w-full -z-0 object-cover absolute" alt="" /> -->
 	<div class="mx-auto max-w-screen-xl">
 		<div class=" flex md:flex-row flex-col h-full justify-between px-10 gap-8 items-center">
@@ -46,11 +48,11 @@
 			</div>
 
 			<div class="z-10 justify-center pb-12 lg:pb-0">
-				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">Hi I'm</h2>
-				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">{tagline}</h2>
+				<h2 class="text-2xl md:text-4xl text-text font-bold sm:text-4xl">Hi I'm</h2>
+				<h2 class="text-2xl md:text-4xl text-text font-bold sm:text-4xl">{tagline}</h2>
 
 				{#if description}
-					<p class="mt-4 text-gray text-ellipsis md:w-96 font-lora">
+					<p class="mt-4 text-gray md:text-lg text-ellipsis md:w-96 font-lora">
 						{description}
 					</p>
 				{/if}
@@ -62,7 +64,7 @@
 						>
 						{CTA.text}
 					</a> -->
-					<Button href={CTA.url} className="mt-8" variant={Variant.outline}>{CTA.text}</Button>
+					<Button href={CTA.url} className="mt-8 " variant={Variant.outline}>{CTA.text}</Button>
 				{/if}
 			</div>
 		</div>
