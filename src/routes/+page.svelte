@@ -4,6 +4,9 @@
 	import Events from '$lib/components/home/Events.svelte';
 </script>
 
+<svelte:head>
+	<title>Home | Benson Thomas</title>
+</svelte:head>
 <Hero />
 <Services />
 <Events />

@@ -65,6 +65,9 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Media | Benson Thomas</title>
+</svelte:head>
 <div
 	class="grid grid-cols-1 md:grid-cols-[repeat(3,1fr)] gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24"
 >

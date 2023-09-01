@@ -41,7 +41,9 @@
 		return `https://www.youtube.com/embed/${videoId}`;
 	}
 </script>
-
+<svelte:head>
+<title>Church | Benson Thomas</title>
+</svelte:head>
 <div class="w-full bg-center bg-cover h-[38rem]" style="background-image: url({imgUrl});">
 	<div class="flex items-center justify-center w-full h-full bg-gray-900/40">
 		<div

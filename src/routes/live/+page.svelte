@@ -1,3 +1,6 @@
+<svelte:head>
+<title>Live | Benson Thomas</title>
+</svelte:head>
 <div class="flex flex-col justify-center items-center w-screen h-[80vh] relative rounded-lg">
 	<iframe
 		src="https://www.youtube.com/embed/zftKyphUW5g"

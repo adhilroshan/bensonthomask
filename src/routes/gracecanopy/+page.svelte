@@ -32,7 +32,9 @@
 		return `https://www.youtube.com/embed/${videoId}`;
 	}
 </script>
-
+<svelte:head>
+<title>Grace Canopy | Benson Thomas</title>
+</svelte:head>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24">
 	{#each playlistItems as item (item.id)}
 		<div class="m-2 w-auto h-auto md:w-[24rem] video-card aspect-video">

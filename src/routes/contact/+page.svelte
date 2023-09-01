@@ -6,7 +6,9 @@
 	let phone = '(257) 563-7401';
 	// loc = 'Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522';
 </script>
-
+<svelte:head>
+<title>Contact | Benson Thomas</title>
+</svelte:head>
 <section
 	class=" m-8 md:m-12 mt-1 rounded-2xl md:pl-24 md:pr-16 min-h-screen bg-gradient-to-r from-blue-600 via-blue-800 to-blue-900 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"
 >

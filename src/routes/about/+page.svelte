@@ -8,6 +8,9 @@
 	let bgColor = '#E6D3B2';
 </script>
 
+<svelte:head>
+	<title>About | Benson Thomas</title>
+</svelte:head>
 <div class="h-screen">
 	<PageHeader {title} {description} {height} {bgImg} {bgColor} blendBg />
 </div>
