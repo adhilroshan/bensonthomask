@@ -23,9 +23,9 @@
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24">
 	{#each playlistItems as item (item.id)}
-		<div class="m-2 w-auto h-auto md:h-64 md:w-[25rem] video-card aspect-video">
+		<div class="m-2 w-auto h-auto md:w-[24rem] video-card aspect-video">
 			<iframe
-				class="rounded-lg"
+				class="rounded-lg w-full"
 				height="250"
 				src={getYoutubeEmbedUrl(item.snippet.resourceId.videoId)}
 				frameborder="0"
