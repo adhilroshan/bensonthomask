@@ -45,7 +45,7 @@
 				</div>
 			</div>
 
-			<div class="z-10 lg:pt-24 mx-auto">
+			<div class="z-10 lg:pt-24">
 				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">Hi I'm</h2>
 				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">{tagline}</h2>
 

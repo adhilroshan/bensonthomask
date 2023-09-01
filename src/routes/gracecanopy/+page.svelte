@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import PageHeader from '$lib/components/global/PageHeader.svelte';
 	import InstagramPost from './../../lib/components/gracecanopy/InstagramPost.svelte';
 	import { onMount } from 'svelte';
@@ -16,7 +16,7 @@
 		playlistItems = data.items;
 	});
 
-	function getYoutubeEmbedUrl(videoId) {
+	function getYoutubeEmbedUrl(videoId: unknown) {
 		return `https://www.youtube.com/embed/${videoId}`;
 	}
 </script>
