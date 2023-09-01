@@ -103,7 +103,7 @@
 	>
 		<iframe
 			title=""
-			class="w-4/5 aspect-video h-[70%] border-[none]"
+			class="w-4/5 rounded-lg aspect-video lg:h-[70%] border-[none]"
 			src={`https://www.youtube.com/embed?listType=playlist&list=${selectedPlaylist.playlistId}`}
 			frameborder="0"
 			allowfullscreen
@@ -116,7 +116,7 @@
 {/if}
 
 <style>
-	.playlist-container {
+	/* .playlist-container {
 		display: grid;
 		padding: 10px;
 		grid-template-columns: repeat(3, 1fr);
@@ -182,5 +182,5 @@
 		border: none;
 		border-radius: 5px;
 		cursor: pointer;
-	}
+	} */
 </style>
