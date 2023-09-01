@@ -17,11 +17,11 @@
 	};
 </script>
 
-<section class="m-12 mt-1 rounded-2xl bg-bgc max-h-screen h-[80vh] shadow-lg shadow-borderColor">
+<section class="m-6 md:m-12 mt-1 rounded-2xl bg-bgc max-h-screen min-h-fit shadow-lg shadow-borderColor">
 	<!-- <img src={Bg} class="h-[70vh] opacity-5 grayscale w-full -z-0 object-cover absolute" alt="" /> -->
 	<div class="mx-auto max-w-screen-xl">
 		<div class=" flex md:flex-row flex-col h-full justify-between px-10 gap-8 items-center">
-			<div class="lg:order-last">
+			<div class="lg:order-last lg:pb-20">
 				<!-- <div
 					class="relative place-self-center drop-shadow-2xl h-80 w-72 overflow-hidden rounded-full sm:h-90 bg-accent"
 				>
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 
-			<div class="z-10 lg:pt-24">
+			<div class="z-10 justify-center pb-12 lg:pb-0">
 				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">Hi I'm</h2>
 				<h2 class="text-2xl md:text-3xl text-text font-bold sm:text-4xl">{tagline}</h2>
 
