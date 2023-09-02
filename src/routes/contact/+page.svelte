@@ -6,11 +6,12 @@
 	let phone = '(257) 563-7401';
 	// loc = 'Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522';
 </script>
+
 <svelte:head>
-<title>Contact | Benson Thomas</title>
+	<title>Contact | Benson Thomas</title>
 </svelte:head>
 <section
-	class=" m-8 md:m-12 mt-1 rounded-2xl md:pl-24 md:pr-16 min-h-screen bg-gradient-to-r from-blue-600 via-blue-800 to-blue-900 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900"
+	class=" m-8 md:m-12 mt-1 rounded-2xl md:pl-24 md:pr-16 min-h-screen bg-gradient-to-r bg-primary"
 >
 	<div class="container flex flex-col min-h-screen px-6 py-12 mx-auto">
 		<div class="flex-1 lg:flex lg:items-center lg:-mx-6">
@@ -93,7 +94,7 @@
 
 					<div class="flex mt-4 -mx-1.5">
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
+							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
 							href="#"
 						>
 							<svg
@@ -109,7 +110,7 @@
 						</a>
 
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
+							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
 							href="#"
 						>
 							<svg
@@ -131,7 +132,7 @@
 						</a>
 
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
+							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
 							href="#"
 						>
 							<svg
@@ -148,7 +149,7 @@
 						</a>
 
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
+							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
 							href="#"
 						>
 							<svg
@@ -179,7 +180,7 @@
 							<input
 								type="text"
 								placeholder="John Doe"
-								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
 						</div>
 
@@ -190,7 +191,7 @@
 							<input
 								type="email"
 								placeholder="johndoe@example.com"
-								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
 						</div>
 						<div class="flex-1 mt-6">
@@ -198,20 +199,20 @@
 							<input
 								type="tel"
 								placeholder="(257) 563-7401"
-								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
 						</div>
 
 						<div class="w-full mt-6">
 							<label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
 							<textarea
-								class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 								placeholder="Message"
 							/>
 						</div>
 
 						<button
-							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50"
 						>
 							get in touch
 						</button>

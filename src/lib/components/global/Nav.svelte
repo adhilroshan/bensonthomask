@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import Logo from '$lib/assets/logo_skl.png';
-	import Button from './global/Button.svelte';
+	import Button from './Button.svelte';
 	import { Variant } from '$lib/types/types';
 
 	let hamburgerMenu = false;
@@ -42,6 +42,14 @@
 			endpoint: '/gracecanopy'
 		}
 	];
+
+	let selectedNavItem = 0; // Initialize with the first item selected
+
+	function selectNavItem(index: number) {
+		selectedNavItem = index;
+		// Optionally, you can also close the hamburger menu here if needed
+		hamburgerMenu = false;
+	}
 </script>
 
 <header class="bg-transparent">
@@ -64,11 +72,14 @@
 			<div class="hidden md:block">
 				<nav aria-label="Global">
 					<ul class="flex items-center gap-6 text-sm">
-						{#each navItems as item}
+						{#each navItems as item, itemIndex}
 							<li>
 								<a
-									class="text-gray-200/90 transition uppercase font-medium hover:text-gray-400/75"
+									class="{itemIndex === selectedNavItem
+										? 'text-bgc'
+										: 'text-gray-200/90'} transition uppercase font-medium hover:text-bgc"
 									href={item.endpoint}
+									on:click={() => selectNavItem(itemIndex)}
 								>
 									{item.name}
 								</a>
@@ -143,12 +154,14 @@
 						<img src={Logo} class="w-14 h-full" alt="logo" />
 					</a>
 					<ul class="flex flex-col justify-center h-screen w-full items-start px-20 gap-6 text-sm">
-						{#each navItems as item}
+						{#each navItems as item, itemIndex}
 							<li>
 								<a
-									class="text-bgc transition text-lg uppercase font-medium hover:text-bgc/75"
+									class="{itemIndex === selectedNavItem
+										? 'text-bgc '
+										: 'text-gray-200/90'} transition uppercase font-medium hover:text-bgc"
 									href={item.endpoint}
-									on:click={handleHamMenu}
+									on:click={() => selectNavItem(itemIndex)}
 								>
 									{item.name}
 								</a>

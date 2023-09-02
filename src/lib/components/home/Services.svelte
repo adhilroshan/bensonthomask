@@ -48,13 +48,13 @@
 		}
 	];
 
-	var title = 'Find your career path';
+	var title = 'Magna culpa enim occaecat officia in esse.';
 	var btnText = 'Get Started Today';
 	var desc =
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero aliquid sint distinctio.';
 </script>
 
-<section class=" h-max">
+<section class="flex items-center min-h-screen justify-center">
 	<div class="max-w-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
 		<div
 			class="grid grid-cols-1 gap-y-8 place-items-center lg:grid-cols-2 lg:items-center lg:gap-x-16"

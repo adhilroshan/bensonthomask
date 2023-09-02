@@ -1,5 +1,6 @@
 <script>
-	import PageHeader from '$lib/components/global/PageHeader.svelte';
+	import Upcoming from '$lib/components/event/Upcoming.svelte';
+import PageHeader from '$lib/components/global/PageHeader.svelte';
 	import Events from '$lib/components/home/Events.svelte';
 
 	let bgImg =
@@ -11,3 +12,4 @@
 </svelte:head>
 
 <PageHeader title="Events" bgColor="#111" textColor="#f1f1f1" centerTitle {bgImg} />
+<Upcoming />

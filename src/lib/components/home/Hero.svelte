@@ -18,11 +18,13 @@
 </script>
 
 <section
-	class="relative m-6 md:m-12 mt-1 rounded-2xl bg-bgc max-h-screen min-h-fit shadow-lg shadow-borderColor"
+	class="relative m-6 md:mx-12 mt-1 rounded-2xl bg-bgc max-h-screen min-h-fit shadow-lg shadow-borderColor"
 >
 	<!-- <img src={Bg} class="h-[70vh] opacity-5 grayscale w-full -z-0 object-cover absolute" alt="" /> -->
 	<div class="mx-auto max-w-screen-xl">
-		<div class=" flex md:flex-row flex-col h-full justify-between px-10 xl:px-10 md:px-20  gap-8 items-center">
+		<div
+			class=" flex md:flex-row flex-col h-full justify-between px-10 xl:px-10 md:px-20 gap-8 items-center"
+		>
 			<div class="lg:order-last md:pb-20">
 				<!-- <div
 					class="relative place-self-center drop-shadow-2xl h-80 w-72 overflow-hidden rounded-full sm:h-90 bg-accent"
