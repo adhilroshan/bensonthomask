@@ -2,7 +2,7 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 	import '@splidejs/svelte-splide/css';
-	import { onMount } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import Card from './Card.svelte';
 	import { API_KEY as apiKey } from '$lib/auth/key';
 
@@ -51,8 +51,16 @@
 
 	export let playlist: Playlist;
 	// console.log(index);
-	export let openVideo: (videoId: string) => void;
+	// export let openVideo: (videoId: string) => void;
 	// export let openPlaylist: (playlist: Playlist) => void;
+
+	const dispatch = createEventDispatcher();
+
+	function openVideo(v: string) {
+		dispatch('video', {
+			videoId: v
+		});
+	}
 </script>
 
 <div class="flex flex-col justify-center items-center overflow-hidden">
@@ -63,15 +71,28 @@
 			lazyLoad: 'nearby',
 			padding: 10,
 			// rewind: true,
+			snap:true,
 			drag: 'free',
 			gap: '1rem',
 			type: 'loop',
 			focus: 'center',
 			perPage: 3,
 			width: '80vw',
+
 			height: '20rem',
 			// autoWidth: true,
 			pagination: false,
+			breakpoints: {
+				1024: {
+					perPage: 3
+				},
+				767: {
+					perPage: 2
+				},
+				640: {
+					perPage: 1
+				}
+			},
 			autoScroll: {
 				speed: 0.51 + 0.1 * Math.sin(2 * idx)
 			}
@@ -79,18 +100,23 @@
 		aria-label={playlist.playlistTitle}
 	>
 		{#each playlistItems as item, i}
-			<SplideSlide
-				class="h-60	 w-auto"
-				key={i}
-				on:click={() => openVideo(item.snippet.resourceId.videoId)}
-			>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<SplideSlide class="h-60 aspect-video	 w-auto" key={i}>
 				<!-- <img
 					class="w-full h-full object-cover"
 					src={item.snippet.thumbnails.default.url}
 					alt={item.snippet.title}
 				/> -->
-
-				<Card title={item.snippet.title} imgUrl={item.snippet.thumbnails.high.url} />
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-static-element-interactions -->
+				<div
+					on:click={() => {
+						openVideo(item.snippet.resourceId.videoId);
+						// console.log(item.snippet.resourceId.videoId);
+					}}
+				>
+					<Card title={item.snippet.title} imgUrl={item.snippet.thumbnails.high.url} />
+				</div>
 			</SplideSlide>
 		{/each}
 	</Splide>

@@ -12,54 +12,43 @@
 		text: ''
 	};
 	export let bgImg: string = '';
-	export let textColor: string = '#1F1F1F';
+	export let textColor: string = '#111';
 	export let bgColor: string = '';
 	export let bgShadow: string = '#4E473B';
-	export let height: string = '80vh';
+	// export let height: string = '80vh';
 	export let blendBg: boolean = false;
+	export let centerTitle: boolean = false;
 </script>
 
 <section
 	style="background-color: {bgColor};"
-	class="relative m-12 mt-1 rounded-2xl max-h-screen h-[{height}] shadow-lg shadow-[{bgShadow}]"
+	class="relative xl:mx-auto mx-5 mt-1 rounded-2xl m-20 max-h-screen max-w-screen-xl h-96 shadow-lg shadow-[{bgShadow}]"
 >
-	{#if blendBg}
-		<!-- content here -->
-		<img src={bgImg} class="h-full opacity-5 grayscale w-full -z-0 object-cover absolute" alt="" />
-	{:else}
-		<img src={bgImg} class="h-full opacity-75 w-full -z-0 object-cover absolute" alt="" />
-		<!-- else content here -->
+	{#if bgImg}
+		<img
+			src={bgImg}
+			class="{blendBg
+				? 'opacity-5 grayscale'
+				: 'opacity-75'} h-full w-full -z-0 object-cover absolute rounded-2xl"
+			alt=""
+		/>
 	{/if}
-	<div class="absolute mx-auto max-w-screen-xl">
-		<div class=" flex md:flex-row flex-col h-full justify-between px-10 gap-8 items-center">
-			<div class="lg:order-last">
-				<!-- <div
-					class="relative place-self-center drop-shadow-2xl h-80 w-72 overflow-hidden rounded-full sm:h-90 bg-accent"
-				>
-					<img alt="Party" src={Headshot} class="absolute inset-0 h-full w-full object-cover" />
-				</div> -->
-				<div class=" relative h-full mx-auto">
-					<!-- <div
-						class="grid items-end overflow-hidden"
-						style="aspect-ratio: 1/1.5; border-radius: 0 0 ;"
-					> -->
-					<!-- <div
-							style="inset: auto 0 0; "
-							class="border-4 border-borderColor aspect-square rounded-t-full absolute mix-blend-multiply mx-auto w-full object-cover"
-						/> -->
-					<!-- <div
-							style="inset: auto 0 0; "
-							class="border-b-4 border-r-4 border-borderColor z-30 aspect-square rounded-t-full absolute mix-blend-multiply mx-auto w-full object-cover"
-						/> -->
-					<img alt="Party" src={Bg} class="absolute h-full w-full object-cover" />
-					<!-- </div> -->
-				</div>
-			</div>
-			<div class="z-10 lg:pt-24">
-				<h2 class="text-3xl text-[{textColor}] font-bold sm:text-4xl">{title}</h2>
+	<div class=" mx-auto w-full h-full">
+		<div
+			class=" flex flex-wrap h-full {centerTitle
+				? 'justify-center'
+				: 'justify-between gap-8'} px-10 items-center"
+		>
+			<div class="z-10">
+				<h2 style="color: {textColor};" class="text-3xl text-center font-bold sm:text-4xl">
+					{title}
+				</h2>
 
 				{#if description}
-					<p class="mt-4 text-gray italic text-ellipsis md:w-96">
+					<p
+						style="color: {textColor};"
+						class="mt-4 opacity-90 italic text-ellipsis mx-auto md:w-2/3 text-center"
+					>
 						{description}
 					</p>
 				{/if}
