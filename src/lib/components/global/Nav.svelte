@@ -90,21 +90,7 @@
 			</div>
 
 			<div class="flex items-center gap-4">
-				<div class="sm:flex sm:gap-4">
-					<!-- <a class="rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-text shadow" href="/"> -->
-					<!-- Take Action -->
-					<!-- </a> -->
-					<Button href="/" variant={Variant.rounded}>Take Action</Button>
-
-					<!-- <div class="hidden sm:flex">
-						<a
-							class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-amber-600"
-							href="/"
-						>
-							Register
-						</a>
-					</div> -->
-				</div>
+				
 
 				<div class="block md:hidden">
 					<button
