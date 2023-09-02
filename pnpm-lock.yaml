@@ -8,6 +8,9 @@ dependencies:
   '@fortawesome/free-solid-svg-icons':
     specifier: ^6.4.2
     version: 6.4.2
+  '@splidejs/splide-extension-auto-scroll':
+    specifier: ^0.5.3
+    version: 0.5.3
   '@splidejs/svelte-splide':
     specifier: ^0.2.9
     version: 0.2.9
@@ -453,6 +456,10 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: false
+
+  /@splidejs/splide-extension-auto-scroll@0.5.3:
+    resolution: {integrity: sha512-vPJ8Tn4uebnHa6scBcIypW154HTDenkazX9Nw8T1na44n7OtLoz40R4RoirteV7taPWW7w7ZZPCiEpi2ReYFAQ==}
     dev: false
 
   /@splidejs/splide@4.1.4:

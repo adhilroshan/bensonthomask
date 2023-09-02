@@ -1,15 +1,39 @@
 <script lang="ts">
-	export let title: string;
-	// export let description: string = '';
-	export let imgUrl: string;
+	interface Playlist {
+		playlistId: string;
+		playlistTitle: string;
+		playlistThumbnailUrl: string;
+	}
+	import * as Card from '$lib/components/ui/card';
+
+	export let playlist: Playlist;
+	export let idx: number;
+	let index = idx.toString();
+	// console.log(index);
+	export let openPlaylist: (playlist: Playlist) => void;
 </script>
 
 <div
-	class="m-3 flex flex-col group hover:cursor-pointer items-center justify-center w-full max-w-sm mx-auto"
+	class="m-3 flex flex-col group hover:cursor-pointer items-center justify-center w-full max-w-sm mx-auto {index ===
+	'0'
+		? ''
+		: ''}"
+	id={index}
+	on:click={() => {
+		openPlaylist(playlist);
+		// console.log(playlist.playlistId);
+	}}
+	on:keydown={(e) => {
+		if (e.key === 'Enter' || e.key === 'Space') {
+			openPlaylist(playlist);
+		}
+	}}
+	role="button"
+	tabindex="0"
 >
 	<div
 		class="w-full relative h-64 bg-gray-300 bg-center bg-cover aspect-video rounded-lg shadow-md"
-		style="background-image: url({imgUrl});"
+		style="background-image: url({playlist.playlistThumbnailUrl});"
 	>
 		<div
 			class="w-full z-20 absolute bottom-0 overflow-hidden rounded-b-lg flex items-center justify-center bg-borderColor/60 group-hover:bg-borderColor backdrop-blur-lg shadow-lg dark:bg-gray-800"
@@ -17,7 +41,7 @@
 			<h3
 				class="py-2 font-lora tracking-wide w-5/6 h-1/3 min-h-fit text-center text-[#F0E5D1] dark:text-white"
 			>
-				{title}
+				{playlist.playlistTitle}
 			</h3>
 
 			<!-- <div class="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">

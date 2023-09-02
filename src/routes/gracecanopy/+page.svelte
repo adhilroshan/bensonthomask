@@ -1,8 +1,8 @@
 <script lang="ts">
 	import InstagramPost from './../../lib/components/gracecanopy/InstagramPost.svelte';
 	import { onMount } from 'svelte';
+	import { API_KEY as apiKey } from '$lib/auth/key';
 
-	export let apiKey = 'AIzaSyBAdvoGy_Hg_VGTyOfiOo_QVpRw7xWL6XI'; // Your YouTube Data API key
 	export let playlistId = 'PLI1cvwejI5Sth63AUaRXTlfPtt59o2Jwt'; // ID of the YouTube playlist
 	type YoutubePlaylistItem = {
 		id: string;
@@ -32,8 +32,9 @@
 		return `https://www.youtube.com/embed/${videoId}`;
 	}
 </script>
+
 <svelte:head>
-<title>Grace Canopy | Benson Thomas</title>
+	<title>Grace Canopy | Benson Thomas</title>
 </svelte:head>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24">
 	{#each playlistItems as item (item.id)}

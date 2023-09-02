@@ -3,8 +3,8 @@
 		'https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80';
 
 	import { onMount } from 'svelte';
+	import { API_KEY as apiKey } from '$lib/auth/key';
 
-	export let apiKey = 'AIzaSyBAdvoGy_Hg_VGTyOfiOo_QVpRw7xWL6XI'; // Your YouTube Data API key
 	export let playlistId = 'PLUhJyvkLp-rOWUDtYfsacytiHts2TV2mY'; // ID of the YouTube playlist
 	type YoutubePlaylistItem = {
 		id: string;

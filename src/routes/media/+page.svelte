@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Card from '$lib/components/media/Card.svelte';
+	import Carousel from '../../lib/components/media/Carousel.svelte';
+	import VideoOverlay from '$lib/components/global/VideoOverlay.svelte';
 	import { onMount } from 'svelte';
+	import { API_KEY, CHANNEL_ID } from '$lib/auth/key';
 
 	interface Playlist {
 		playlistId: string;
@@ -9,14 +11,14 @@
 	}
 
 	let playlists: Playlist[] = [];
-
-	const API_KEY = 'AIzaSyBAdvoGy_Hg_VGTyOfiOo_QVpRw7xWL6XI';
-	const CHANNEL_ID = 'UCPoY5l3eAzBqeBJwT6iVhgw';
+	let excludedPlaylists: Playlist[];
+	let nextbtn: boolean = false;
 	let maxResults = 40;
-	let nextPageToken = '';
+	// let nextPageToken = '';
 
 	async function fetchPlaylists() {
-		const apiUrl = `https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,contentDetails&maxResults=${maxResults}&pageToken=${nextPageToken}`;
+		const apiUrl = `https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,contentDetails&maxResults=${maxResults}`;
+		// const apiUrl = `https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,contentDetails&maxResults=${maxResults}&pageToken=${nextPageToken}`;
 
 		try {
 			const response = await fetch(apiUrl);
@@ -39,17 +41,34 @@
 					'MALAYALAM CHRISTIAN WORSHIP - CHOIR'
 				];
 
+				const excludeItems: string[] = [
+					'Kerala Trip 2023',
+					'Worship Session | 2021',
+					'Worship Session | 2018',
+					'Worship Sessions | 2019',
+					'Christian Mission & Evangelism | Benson Thomas',
+					'JERUSALEM the Capital of ISRAEL',
+					'Pratyasha Ganangal | Songs of Hope | Praise & Worship | Benson Thomas',
+					'WEEKDAY PRAYER MEETING WORSHIP',
+					'SONGS OF WORSHIP [MALAYALAM]'
+				];
 				const sortedPlaylists = sortOrder.map((title) =>
 					fetchedPlaylists.find((playlist: Playlist) => playlist.playlistTitle.includes(title))
 				);
-				const remainingPlaylists = fetchedPlaylists.filter(
-					(playlist: Playlist) => !sortedPlaylists.includes(playlist)
+				excludedPlaylists = excludeItems.map((title) =>
+					fetchedPlaylists.find((playlist: Playlist) => playlist.playlistTitle.includes(title))
 				);
+				const remainingPlaylists = fetchedPlaylists.filter((playlist: Playlist) => {
+					return (
+						!sortedPlaylists.includes(playlist) && !excludeItems.includes(playlist.playlistTitle)
+					);
+				});
 
+				console.log('\nRemaining Playlist\n', remainingPlaylists, '\n');
 				playlists = sortedPlaylists.concat(remainingPlaylists);
 				console.log(playlists);
-
-				nextPageToken = data.nextPageToken || '';
+				nextbtn = true;
+				// nextPageToken = data.nextPageToken || '';
 			}
 		} catch (error) {
 			console.error('Error fetching data:', error);
@@ -57,50 +76,44 @@
 	}
 
 	onMount(fetchPlaylists);
+	function nxtpg() {
+		playlists = excludedPlaylists;
+		nextbtn = false;
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth' // Optional: Add smooth scrolling effect
+		});
+	}
+	// let selectedPlaylist: Playlist | null = null;
+	let selectedVideo: string;
+	let isVideoSelected: boolean = false;
 
-	let selectedPlaylist: Playlist | null = null;
-
-	function openPlaylist(playlist: Playlist) {
-		selectedPlaylist = playlist;
+	function openVideo(videoId: string) {
+		selectedVideo = videoId;
 	}
 </script>
 
 <svelte:head>
 	<title>Media | Benson Thomas</title>
 </svelte:head>
-<div
-	class="grid grid-cols-1 md:grid-cols-[repeat(3,1fr)] gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24"
->
-	{#each playlists as playlist, index}
-		<!-- <div
-			class="w-[var(--size)] relative overflow-hidden text-black cursor-pointer rounded-[2rem]"
-			style="transform: translateZ(0);"
-			role="button"
-			on:click={() => openPlaylist(playlist)}
-			on:keydown={(e) => {
-				if (e.key === 'Enter' || e.key === 'Space') {
-					openPlaylist(playlist);
-				}
-			}}
-			tabindex="0"
-		>
-			<img
-				src={playlist.playlistThumbnailUrl}
-				alt={playlist.playlistTitle}
-				class=" w-full h-full object-cover"
-			/>
-			<span
-				class="absolute w-full backdrop-blur-[var(--blur] h-[30%] content-center px-6 py-0 left-0 bottom-0"
-				style="background:  hsl(0 0% 100% / 0.5);"
-			>
-				<span>{playlist.playlistTitle}</span>
-			</span>
-		</div> -->
-		<Card {playlist} {openPlaylist} idx={index} />
-	{/each}
-</div>
+<!-- <div
+	class="grid grid-cols-1 lg:lg:grid-cols-[repeat(2,1fr)] xl:grid-cols-[repeat(3,1fr)] gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24"
+> -->
+{#each playlists as playlist, idx}
+	<Carousel {playlist} {openVideo} {idx} />
+{/each}
+<!-- </div> -->
+{#if nextbtn}
+	<!-- content here -->
+	<button
+		class="rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-text shadow hover:scale-105 active:scale-95 transition-all duration-150 block mx-auto my-0"
+		on:click={nxtpg}>Next</button
+	>
+{/if}
 
-{#if selectedPlaylist}
+<VideoOverlay {isVideoSelected} videoId={selectedVideo} />
+
+<!-- {#if selectedPlaylist}
 	<div
 		class="fixed w-full h-full bg-[rgba(0,0,0,0.8)] flex flex-col items-center z-40 justify-center left-0 top-0"
 	>
@@ -116,74 +129,4 @@
 			on:click={() => (selectedPlaylist = null)}>Close</button
 		>
 	</div>
-{/if}
-
-<style>
-	/* .playlist-container {
-		display: grid;
-		padding: 10px;
-		grid-template-columns: repeat(3, 1fr);
-		grid-column-gap: 4px;
-		grid-row-gap: 4px;
-		place-items: center;
-	}
-
-	.card {
-		--blur: 16px;
-		--size: clamp(300px, 50vmin, 600px);
-		width: var(--size);
-		aspect-ratio: 4 / 3;
-		position: relative;
-		border-radius: 2rem;
-		overflow: hidden;
-		color: #000;
-		transform: translateZ(0);
-		cursor: pointer;
-	}
-
-	.card__img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-	.card__footer {
-		padding: 0 1.5rem;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		background: hsl(0 0% 100% / 0.5);
-		backdrop-filter: blur(var(--blur));
-		height: 30%;
-		align-content: center;
-	}
-
-	.iframe-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.8);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	iframe {
-		width: 80%;
-		height: 70%;
-		border: none;
-	}
-
-	button {
-		margin-top: 10px;
-		background-color: white;
-		padding: 10px 20px;
-		border: none;
-		border-radius: 5px;
-		cursor: pointer;
-	} */
-</style>
+{/if} -->

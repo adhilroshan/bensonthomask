@@ -5,7 +5,7 @@
 	// import Bg from '$lib/assets/bg.jpg';
 	// let tagline: string = 'I WILL SING TO THE LORD FOR HE IS GOOD HIS MERCIES ENDURETH FOREVER';
 	// let tagline: string = 'Bensonthomask: The sound of hope.';
-	let tagline: string = 'Benson Thomas';
+	let tagline: string = 'Benson Thomas K';
 	let description: string;
 	//  = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic
 	//       atque tenetur quis eius quos ea neque sunt, accusantium soluta minus
@@ -22,8 +22,8 @@
 >
 	<!-- <img src={Bg} class="h-[70vh] opacity-5 grayscale w-full -z-0 object-cover absolute" alt="" /> -->
 	<div class="mx-auto max-w-screen-xl">
-		<div class=" flex md:flex-row flex-col h-full justify-between px-10 gap-8 items-center">
-			<div class="lg:order-last lg:pb-20">
+		<div class=" flex md:flex-row flex-col h-full justify-between px-10 xl:px-10 md:px-20  gap-8 items-center">
+			<div class="lg:order-last md:pb-20">
 				<!-- <div
 					class="relative place-self-center drop-shadow-2xl h-80 w-72 overflow-hidden rounded-full sm:h-90 bg-accent"
 				>

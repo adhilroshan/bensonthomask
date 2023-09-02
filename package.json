@@ -34,6 +34,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fortawesome/free-solid-svg-icons": "^6.4.2",
+		"@splidejs/splide-extension-auto-scroll": "^0.5.3",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"bits-ui": "^0.0.33",
 		"clsx": "^2.0.0",
