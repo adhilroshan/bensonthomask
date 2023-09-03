@@ -23,8 +23,8 @@
 	onMount(fetchLatestVideos);
 </script>
 
-<h1 class="my-10 text-2xl md:text-4xl text-white font-bold text-center">What we have for you</h1>
-<p class="w-5/6 md:w-1/2 text-sm -mt-5 text-white/80 mb-10 font-medium text-center mx-auto">
+<h1 class="my-10 text-2xl md:text-4xl text-bgc font-bold text-center">What we have for you</h1>
+<p class="w-5/6 md:w-1/2 text-sm -mt-5 text-bgc/80 mb-10  text-center mx-auto">
 	Excepteur dolor id aliqua occaecat ipsum. Nostrud culpa labore velit nisi et amet velit nisi minim
 	officia dolore. Consequat laborum commodo consectetur consectetur ullamco et aliqua irure duis
 	sunt anim minim.
