@@ -1,10 +1,10 @@
-<section class="xl:mx-auto max-w-screen-xl mx-5 mt-1 rounded-2xl m-20 bg-bgc ">
-<!-- <section class="xl:mx-auto max-w-screen-xl mx-5 mt-1 rounded-2xl m-20 bg-bgc dark:bg-gray-900"> -->
+<section class="xl:mx-auto max-w-screen-xl mx-5 mt-1 rounded-2xl m-20 bg-bgc">
+	<!-- <section class="xl:mx-auto max-w-screen-xl mx-5 mt-1 rounded-2xl m-20 bg-bgc dark:bg-gray-900"> -->
 	<div class="max-w-6xl px-6 py-10 mx-auto">
 		<p class="text-xl font-medium text-borderColor/90">Veniam nostrud officia eu dolor enim.</p>
 
-		<h1 class="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl ">
-		<!-- <h1 class="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white"> -->
+		<h1 class="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">
+			<!-- <h1 class="mt-2 text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white"> -->
 			Non consequat qui eiusmod magna ipsum tempor.
 		</h1>
 
@@ -22,7 +22,7 @@
 
 				<div class="mt-2 md:mx-6">
 					<div>
-						<p class="text-xl font-medium tracking-tight text-white">Lorem ipsum</p>
+						<p class="text-xl font-medium tracking-tight text-white">Amet et elit exercitation.</p>
 						<!-- <p class="text-borderColor">Marketing Manager at Stech</p> -->
 					</div>
 

@@ -11,11 +11,11 @@
 	<title>Contact | Benson Thomas</title>
 </svelte:head>
 <section
-	class=" m-8 md:m-12 mt-1 rounded-2xl md:pl-24 md:pr-16 min-h-screen bg-gradient-to-r bg-primary"
+	class=" m-8 md:m-12 mt-1 rounded-2xl md:pl-24 md:pr-16 min-h-screen bg-gradient-to-r bg-bgc"
 >
 	<div class="container flex flex-col min-h-screen px-6 py-12 mx-auto">
 		<div class="flex-1 lg:flex lg:items-center lg:-mx-6">
-			<div class="text-white lg:w-1/2 lg:mx-6">
+			<div class="text-text lg:w-1/2 lg:mx-6">
 				<h1 class="text-2xl font-semibold capitalize lg:text-3xl">{title}</h1>
 
 				<p class="max-w-xl mt-6">{desc}</p>
@@ -26,7 +26,7 @@
 						<p class="flex items-start -mx-2">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6 mx-2 text-white"
+								class="w-6 h-6 mx-2 text-text"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -44,7 +44,7 @@
 								/>
 							</svg>
 
-							<span class="mx-2 text-white truncate w-72">
+							<span class="mx-2 text-text truncate w-72">
 								{loc}
 							</span>
 						</p>
@@ -53,7 +53,7 @@
 					<p class="flex items-start -mx-2">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="w-6 h-6 mx-2 text-white"
+							class="w-6 h-6 mx-2 text-text"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -66,13 +66,13 @@
 							/>
 						</svg>
 
-						<span class="mx-2 text-white truncate w-72">{phone}</span>
+						<span class="mx-2 text-text truncate w-72">{phone}</span>
 					</p>
 
 					<p class="flex items-start -mx-2">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="w-6 h-6 mx-2 text-white"
+							class="w-6 h-6 mx-2 text-text"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -85,16 +85,16 @@
 							/>
 						</svg>
 
-						<span class="mx-2 text-white truncate w-72">{email}</span>
+						<span class="mx-2 text-text truncate w-72">{email}</span>
 					</p>
 				</div>
 
 				<div class="mt-6 md:mt-8">
-					<h3 class="text-gray-300">Follow us</h3>
+					<h3 class="text-gray-900">Follow us</h3>
 
 					<div class="flex mt-4 -mx-1.5">
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
+							class="mx-1.5 text-text transition-colors duration-300 transform hover:text-bgc"
 							href="#"
 						>
 							<svg
@@ -110,7 +110,7 @@
 						</a>
 
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
+							class="mx-1.5 text-text transition-colors duration-300 transform hover:text-bgc"
 							href="#"
 						>
 							<svg
@@ -132,7 +132,7 @@
 						</a>
 
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
+							class="mx-1.5 text-text transition-colors duration-300 transform hover:text-bgc"
 							href="#"
 						>
 							<svg
@@ -149,7 +149,7 @@
 						</a>
 
 						<a
-							class="mx-1.5 text-white transition-colors duration-300 transform hover:text-primary"
+							class="mx-1.5 text-text transition-colors duration-300 transform hover:text-bgc"
 							href="#"
 						>
 							<svg
@@ -170,49 +170,47 @@
 
 			<div class="mt-8 lg:w-1/2 lg:mx-6">
 				<div
-					class="w-full px-8 py-10 mx-auto overflow-hidden bg-white shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl"
+					class="w-full px-8 border-2 border-text bg-borderColor py-10 mx-auto overflow-hidden bg-texttext-text shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl"
 				>
-					<h1 class="text-xl font-medium text-gray-700 dark:text-gray-200">Contact form</h1>
+					<h1 class="text-xl font-medium text-bgclight dark:text-gray-200">Contact form</h1>
 
 					<form class="mt-4">
 						<div class="flex-1">
-							<label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
+							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Full Name</label>
 							<input
 								type="text"
 								placeholder="John Doe"
-								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full px-5 py-3 mt-2 text-borderColor bg-texttext-text border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
 						</div>
 
 						<div class="flex-1 mt-6">
-							<label class="block mb-2 text-sm text-gray-600 dark:text-gray-200"
-								>Email address</label
-							>
+							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Email address</label>
 							<input
 								type="email"
 								placeholder="johndoe@example.com"
-								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full px-5 py-3 mt-2 text-borderColor bg-texttext-text border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
 						</div>
 						<div class="flex-1 mt-6">
-							<label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Phone</label>
+							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Phone</label>
 							<input
 								type="tel"
 								placeholder="(257) 563-7401"
-								class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full px-5 py-3 mt-2 text-borderColor bg-texttext-text border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
 						</div>
 
 						<div class="w-full mt-6">
-							<label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Message</label>
 							<textarea
-								class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+								class="block w-full h-32 px-5 py-3 mt-2 text-borderColor placeholder-gray-400 bg-texttext-text border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 								placeholder="Message"
 							/>
 						</div>
 
 						<button
-							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50"
+							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-text capitalize transition-colors duration-300 transform bg-bgc rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-bgc focus:ring-opacity-50"
 						>
 							get in touch
 						</button>

@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { API_KEY, CHANNEL_ID } from '$lib/auth/key';
 	import PageHeader from '$lib/components/global/PageHeader.svelte';
+	import { blur, fade } from 'svelte/transition';
 
 	interface Playlist {
 		playlistId: string;
@@ -143,6 +144,7 @@
 	<div
 		class="fixed w-full h-full bg-[rgba(0,0,0,0.8)] flex flex-col transition-all duration-200 items-center z-40 justify-center left-0 top-0"
 		role="dialog"
+		transition:blur
 		on:click={() => (isVideoSelected = false)}
 	>
 		<button
@@ -153,6 +155,7 @@
 		</button>
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<iframe
+			transition:fade
 			on:click|stopPropagation
 			title=""
 			class="w-4/5 relative rounded-lg transition-all duration-200 aspect-video lg:h-[70%] border-[none]"

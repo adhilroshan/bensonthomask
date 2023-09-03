@@ -18,7 +18,7 @@
 </script>
 
 <section
-	class="relative m-6 md:mx-12 mt-1 rounded-2xl bg-bgc max-h-screen min-h-fit shadow-lg shadow-borderColor"
+	class="relative m-6 md:mx-12 mt-1 rounded-2xl bg-bgc min-h-fit shadow-lg shadow-borderColor"
 >
 	<!-- <img src={Bg} class="h-[70vh] opacity-5 grayscale w-full -z-0 object-cover absolute" alt="" /> -->
 	<div class="mx-auto max-w-screen-xl">
@@ -38,11 +38,11 @@
 					>
 						<div
 							style="inset: auto 0 0; "
-							class=" border-4 border-borderColor aspect-square rounded-t-full absolute mix-blend-multiply mx-auto w-full object-cover"
+							class=" border-4 border-borderColor aspect-square rounded-t-full absolute mx-auto w-full object-cover"
 						/>
 						<div
 							style="inset: auto 0 0; "
-							class="border-b-4 border-r-4 border-borderColor z-30 aspect-square rounded-t-full absolute mix-blend-multiply mx-auto w-full object-cover"
+							class="border-b-4 border-r-4 border-borderColor z-30 aspect-square rounded-t-full absolute mx-auto w-full object-cover"
 						/>
 						<img alt="Headshot" src={Headshot} class="relative z-20" />
 					</div>
@@ -66,7 +66,7 @@
 						>
 						{CTA.text}
 					</a> -->
-					<Button href={CTA.url} className="mt-8 " variant={Variant.outline}>{CTA.text}</Button>
+					<Button href={CTA.url} className="mt-8  " variant={Variant.outline}>{CTA.text}</Button>
 				{/if}
 			</div>
 		</div>

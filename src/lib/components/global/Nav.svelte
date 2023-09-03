@@ -2,6 +2,7 @@
 	import Logo from '$lib/assets/logo_skl.png';
 	import Button from './Button.svelte';
 	import { Variant } from '$lib/types/types';
+	import { slide } from 'svelte/transition';
 
 	let hamburgerMenu = false;
 	let handleHamMenu = () => {
@@ -90,28 +91,37 @@
 			</div>
 
 			<div class="flex items-center gap-4">
-				
-
 				<div class="block md:hidden">
 					<button
 						on:click={handleHamMenu}
-						class="rounded bg-[#55A0E8] p-2 text-text transition hover:text-text/75"
+						class="rounded p-2 text-text transition hover:text-text/75"
+						transition:slide
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-5 w-5"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							stroke-width="2"
-						>
-							<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+						<svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12Z"
+								fill="#E6D3B2"
+							/>
+							<path
+								d="M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z"
+								fill="#E6D3B2"
+							/>
+							<path
+								d="M17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z"
+								fill="#E6D3B2"
+							/>
+							<path
+								d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
+								stroke="#E6D3B2"
+								stroke-width="1.5"
+								stroke-linecap="round"
+							/>
 						</svg>
 					</button>
 				</div>
 			</div>
 			{#if hamburgerMenu}
-				<div class="w-full h-full bg-text top-0 left-0 fixed z-50">
+				<div class="w-full h-full bg-text top-0 left-0 fixed z-50" transition:slide>
 					<button class="absolute top-8 right-6" on:click={handleHamMenu}>
 						<svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
