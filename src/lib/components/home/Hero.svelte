@@ -33,18 +33,18 @@
 				</div> -->
 				<div class=" relative max-w-xs mx-auto">
 					<div
-						class="grid items-end overflow-hidden"
+						class="grid items-end overflow-hidden drop-shadow-xl"
 						style="aspect-ratio: 1/1.5; border-radius: 0 0 ;"
 					>
 						<div
 							style="inset: auto 0 0; "
-							class=" border-4 border-borderColor aspect-square rounded-t-full absolute mx-auto w-full object-cover"
+							class=" border-4 border-borderColor aspect-square rounded-tl-[80px] rounded-br-[80px] absolute mx-auto w-full object-cover"
 						/>
 						<div
 							style="inset: auto 0 0; "
-							class="border-b-4 border-r-4 border-borderColor z-30 aspect-square rounded-t-full absolute mx-auto w-full object-cover"
+							class="border-b-4 border-r-4 border-borderColor z-30 aspect-square rounded-tl-[80px] rounded-br-[80px] absolute mx-auto w-full object-cover"
 						/>
-						<img alt="Headshot" src={Headshot} class="relative z-20" />
+						<img alt="Headshot" src={Headshot} class="relative z-20 rounded-br-[80px]" />
 					</div>
 				</div>
 			</div>

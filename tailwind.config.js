@@ -22,7 +22,7 @@ const config = {
 				accent: '#80B4E6',
 				bgc: '#E6D3B2',
 				bgclight: '#F0E5D1',
-				bgcdark: '#B5883B',
+				'bgc-dark': '#B5883B',
 				borderColor: '#4E473B',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
