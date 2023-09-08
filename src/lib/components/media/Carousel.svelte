@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 	import '@splidejs/svelte-splide/css';
 	import { createEventDispatcher, onMount } from 'svelte';
 	import Card from './Card.svelte';
@@ -66,7 +65,6 @@
 <div class="flex flex-col justify-center items-center overflow-hidden">
 	<h1 class="text-bgc mx-auto my-2 text-xl font-semibold font-lora">{playlist.playlistTitle}</h1>
 	<Splide
-		extensions={{ AutoScroll }}
 		options={{
 			lazyLoad: 'nearby',
 			padding: 10,
@@ -93,9 +91,6 @@
 					perPage: 1
 				}
 			},
-			autoScroll: {
-				speed: 0.51 + 0.1 * Math.sin(2 * idx)
-			}
 		}}
 		aria-label={playlist.playlistTitle}
 	>
