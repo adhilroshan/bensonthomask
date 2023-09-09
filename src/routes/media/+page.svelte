@@ -54,6 +54,11 @@
 					'WEEKDAY PRAYER MEETING WORSHIP',
 					'SONGS OF WORSHIP [MALAYALAM]'
 				];
+
+				const NegativePlaylist: string[] = [
+					'The Lighthouse Church TLC',
+					'TEENAGE AND YOUTHFUL DAYS..!!'
+				];
 				const sortedPlaylists = sortOrder.map((title) =>
 					fetchedPlaylists.find((playlist: Playlist) => playlist.playlistTitle.includes(title))
 				);
@@ -62,7 +67,9 @@
 				);
 				const remainingPlaylists = fetchedPlaylists.filter((playlist: Playlist) => {
 					return (
-						!sortedPlaylists.includes(playlist) && !excludeItems.includes(playlist.playlistTitle)
+						!sortedPlaylists.includes(playlist) &&
+						!excludeItems.includes(playlist.playlistTitle) &&
+						!NegativePlaylist.includes(playlist.playlistTitle)
 					);
 				});
 
