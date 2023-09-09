@@ -18,6 +18,16 @@ collections:
       -  {label:  "Description",  name:  "description",  widget:  "string"}
       -  {label:  "Button URL",  name:  "btnUrl",  widget:  "string"}
       -  {label:  "Featured Photo",  name:  "Headshot",  widget:  "image"}
+      # -  {label:  "Layout",  name:  "layout",  widget:  "hidden",  default:  "blog"}
       # -  {label:  "Publish Date",  name:  "date",  widget:  "datetime"}
       # -  {label:  "Body",  name:  "body",  widget:  "markdown"}
-      # -  {label:  "Layout",  name:  "layout",  widget:  "hidden",  default:  "blog"}
+  - name:  "about"  # Used in routes, e.g., /admin/collections/blog
+    label:  "About Us"  # Used in the UI
+    folder:  "src/data"  # The path to the folder where the documents are stored
+    create:  false  # Allow users to create new documents in this collection
+    slug:  "about.md"  # Filename template, e.g., title.md
+    fields:  # The fields for each document, usually in front matter
+      -  {label:  "Title",  name:  "title",  widget:  "string"}
+      -  {label:  "Description",  name:  "description",  widget:  "string"}
+      -  {label:  "Background Color",  name:  "bgColor",  widget:  "string"}
+      -  {label:  "Background Image",  name:  "bgImg",  widget:  "image"}

@@ -11,3 +11,11 @@ export interface Hero {
 	btnUrl: string;
 	Headshot: string;
 }
+
+export interface AboutMeData {
+  title: string;
+  description: string;
+  bgImg: string;
+  bgColor: string;
+  date: string; // You can use a more specific date type if needed
+}
