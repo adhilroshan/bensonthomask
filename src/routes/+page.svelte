@@ -6,12 +6,13 @@
 	import Story from '$lib/components/home/Story.svelte';
 	import Testimonials from '$lib/components/home/Testimonials.svelte';
 	import Footer from '$lib/components/home/Footer.svelte';
+	export let data;
 </script>
 
 <svelte:head>
 	<title>Home | Benson Thomas</title>
 </svelte:head>
-<Hero />
+<Hero heroData={data.hero} />
 <Services />
 <Events />
 <br />

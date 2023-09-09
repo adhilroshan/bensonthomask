@@ -1,20 +1,26 @@
 <script lang="ts">
-	import Headshot from '$lib/assets/benson3.png';
+	import type { Hero } from '$lib/types/types';
 	import { Variant } from '$lib/types/types';
+
+	export let heroData: Hero;
+	const Headshot = heroData.Headshot;
+	const tagline = heroData.tagline;
+	const description = heroData.description;
 	import Button from '../global/Button.svelte';
+	var CTA = {
+		url: heroData.btnUrl,
+		text: heroData.btnText
+	};
+	// import Headshot from '$lib/assets/benson3.png';
 	// import Bg from '$lib/assets/bg.jpg';
+	// let tagline: string = 'Benson Thomas K';
 	// let tagline: string = 'I WILL SING TO THE LORD FOR HE IS GOOD HIS MERCIES ENDURETH FOREVER';
 	// let tagline: string = 'Bensonthomask: The sound of hope.';
-	let tagline: string = 'Benson Thomas K';
-	let description: string;
+	// let description: string;
 	//  = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui hic
 	//       atque tenetur quis eius quos ea neque sunt, accusantium soluta minus
 	//       veniam tempora deserunt? Molestiae eius quidem quam repellat.`;
-	description = '"I will sing to the lord for he is good his mercies endureth forever"';
-	var CTA = {
-		url: '#',
-		text: 'Get Started Today'
-	};
+	// description = '"I will sing to the lord for he is good his mercies endureth forever"';
 </script>
 
 <section
