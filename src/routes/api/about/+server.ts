@@ -9,13 +9,13 @@ interface File{
 
 async function getAboutMeData() {
 	
-	const paths = import.meta.glob(path, { eager: true });
+	const paths = import.meta.glob('/src/data/about.md', { eager: true });
 	const file = paths[path] as File;
 	return file.metadata;
 
 }
 
 export async function GET() {
-	const about = await getAboutMeData();
-	return json(about);
+	const aboutMeData = await getAboutMeData();
+	return json(aboutMeData);
 }
