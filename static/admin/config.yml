@@ -2,32 +2,59 @@ backend:
   name: git-gateway
   branch: main
   # This line should *not* be indented
-  publish_mode:  editorial_workflow
+  publish_mode: editorial_workflow
   # These lines should *not* be indented
-media_folder: "static/uploads"  # Media files will be stored in the repo under static/uploads
-public_folder: "/uploads"  # The src attribute for uploaded media will begin with /uploads
+media_folder: "static/uploads" # Media files will be stored in the repo under static/uploads
+public_folder: "/uploads" # The src attribute for uploaded media will begin with /uploads
 
 collections:
-  - name:  "hero"  # Used in routes, e.g., /admin/collections/blog
-    label:  "Hero"  # Used in the UI
-    folder:  "src/data"  # The path to the folder where the documents are stored
-    create:  false  # Allow users to create new documents in this collection
-    slug:  "hero.md"  # Filename template, e.g., title.md
-    fields:  # The fields for each document, usually in front matter
-      -  {label:  "Tagline",  name:  "tagline",  widget:  "string"}
-      -  {label:  "Description",  name:  "description",  widget:  "string"}
-      -  {label:  "Button URL",  name:  "btnUrl",  widget:  "string"}
-      -  {label:  "Featured Photo",  name:  "Headshot",  widget:  "image"}
+  - name: "hero" # Used in routes, e.g., /admin/collections/blog
+    label: "Hero" # Used in the UI
+    folder: "src/data" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "hero.md" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Button URL", name: "btnUrl", widget: "string" }
+      - { label: "Featured Photo", name: "Headshot", widget: "image" }
       # -  {label:  "Layout",  name:  "layout",  widget:  "hidden",  default:  "blog"}
       # -  {label:  "Publish Date",  name:  "date",  widget:  "datetime"}
       # -  {label:  "Body",  name:  "body",  widget:  "markdown"}
-  - name:  "about"  # Used in routes, e.g., /admin/collections/blog
-    label:  "About Us"  # Used in the UI
-    folder:  "src/data"  # The path to the folder where the documents are stored
-    create:  false  # Allow users to create new documents in this collection
-    slug:  "about.md"  # Filename template, e.g., title.md
-    fields:  # The fields for each document, usually in front matter
-      -  {label:  "Title",  name:  "title",  widget:  "string"}
-      -  {label:  "Description",  name:  "description",  widget:  "string"}
-      -  {label:  "Background Color",  name:  "bgColor",  widget:  "string"}
-      -  {label:  "Background Image",  name:  "bgImg",  widget:  "image"}
+  - name: "about" # Used in routes, e.g., /admin/collections/blog
+    label: "About Us" # Used in the UI
+    folder: "src/data" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "about.md" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Background Color", name: "bgColor", widget: "string" }
+      - { label: "Background Image", name: "bgImg", widget: "image" }
+  - name: "church" # Used in routes, e.g., /admin/collections/blog
+    label: "Church" # Used in the UI
+    folder: "src/data" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "church.md" # Filename template, e.g., title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Image URL", name: "imgUrl", widget: "string" }
+      - { label: "Playlist Id", name: "playlistId", widget: "string" }
+  - name: "story"
+    label: "Story"
+    folder: "src/data"
+    create: false
+    slug: "story.md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Super Title", name: "supTitle", widget: "string" }
+  - label: "Story Cards"
+    name: "storyCards"
+    folder: "src/data/story"
+    create: true
+    slug:  "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Featured Image", name: "imgUrl", widget: "image"}
+      - {label: "Poster Title", name: "posterTitle", widget: "string"}
+      - {label: "Poster Description", name: "posterDesc", widget: "string"}
+      - {label: "Date", name: "Date", widget: "datetime"}
+    

@@ -7,7 +7,7 @@
 	import Fa from 'svelte-fa';
 	import { faArchway } from '@fortawesome/free-solid-svg-icons';
 	import Button from '../global/Button.svelte';
-	import { Variant } from '$lib/types/types';
+	import { Variant } from '$lib/types';
 
 	var items = [
 		{

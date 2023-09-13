@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from '../ui/button/button.svelte';
 
-	import { Variant } from '$lib/types/types';
+	import { Variant } from '$lib/types';
 
 	export let bg: string = 'accent';
 	export let href: string;

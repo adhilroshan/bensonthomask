@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import type { AboutMeData } from '$lib/types/types';
+import type { AboutMeData } from '$lib/types';
 
 const path='/src/data/about.md';
 

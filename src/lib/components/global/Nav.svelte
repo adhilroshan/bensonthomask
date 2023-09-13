@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Logo from '$lib/assets/logo_skl.png';
 	import Button from './Button.svelte';
-	import { Variant } from '$lib/types/types';
+	import { Variant } from '$lib/types';
 	import { slide } from 'svelte/transition';
 
 	let hamburgerMenu = false;

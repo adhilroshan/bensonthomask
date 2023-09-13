@@ -5,7 +5,7 @@
 -->
 
 <script>
-	import { Variant } from '$lib/types/types';
+	import { Variant } from '$lib/types';
 	import Button from '../global/Button.svelte';
 	export let reverse = false;
 

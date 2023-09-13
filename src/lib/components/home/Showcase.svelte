@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { API_KEY as apiKey, CHANNEL_ID as channelId } from '$lib/auth/key';
-
+	import { onMount } from 'svelte';
+	import Button from '../global/Button.svelte';
+	import { Variant } from '$lib/types';
 	let latestVideos: { title: string; videoId: string }[] = [];
 	// Fetch the latest video data
 	async function fetchLatestVideos() {
@@ -17,14 +19,12 @@
 	}
 
 	// Fetch the latest video when the component mounts
-	import { onMount } from 'svelte';
-	import Button from '../global/Button.svelte';
-	import { Variant } from '$lib/types/types';
+
 	onMount(fetchLatestVideos);
 </script>
 
 <h1 class="my-10 text-2xl md:text-4xl text-bgc font-bold text-center">What we have for you</h1>
-<p class="w-5/6 md:w-1/2 text-sm -mt-5 text-bgc/80 mb-10  text-center mx-auto">
+<p class="w-5/6 md:w-1/2 text-sm -mt-5 text-bgc/80 mb-10 text-center mx-auto">
 	Excepteur dolor id aliqua occaecat ipsum. Nostrud culpa labore velit nisi et amet velit nisi minim
 	officia dolore. Consequat laborum commodo consectetur consectetur ullamco et aliqua irure duis
 	sunt anim minim.

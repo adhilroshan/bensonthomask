@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Hero } from '$lib/types/types';
-	import { Variant } from '$lib/types/types';
+	import type { Hero } from '$lib/types';
+	import { Variant } from '$lib/types';
 
 	export let heroData: Hero;
 	const Headshot = heroData.Headshot;
