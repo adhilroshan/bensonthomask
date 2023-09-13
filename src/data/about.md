@@ -1,7 +1,10 @@
 ---
 title: About Me
-description: Hi, I'm Benson Thomas, a Christian YouTuber with over 200,000 subscribers. I create videos about my faith, life, and family. I'm passionate about sharing my faith in a relatable and down-to-earth way. I also love to make people laugh and inspire them through my videos.forever
-bgImg: /uploads/benson3.png
+description: Hi, I'm Benson Thomas, a Christian YouTuber with over 200,000
+  subscribers. I create videos about my faith, life, and family. I'm passionate
+  about sharing my faith in a relatable and down-to-earth way. I also love to
+  make people laugh and inspire them through my videos.forever
 bgColor: "#E6D3B2"
+bgImg: /uploads/bg.jpg
 date: 2023-09-08T04:37:11.981Z
 ---
