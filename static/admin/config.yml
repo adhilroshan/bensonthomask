@@ -56,7 +56,7 @@ collections:
     identifier_field: name
     folder: "src/data/story"
     create: true
-    slug:  "{{slug}}"
+    slug:  "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
     fields:
       - {label: "Featured Image", name: "imgUrl", widget: "image"}
       - {label: "Poster Title", name: "posterTitle", widget: "string"}
