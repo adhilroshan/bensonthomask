@@ -7,19 +7,49 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "hero"
-    label: "Hero"
+  - name: "home"
+    label: "Home Page"
     # folder: "src/data"
     create: false
     files: 
     - name: "hero.md"  # This should be the name of your file
       label: "Hero"
-      file: "src/data"
+      file: "src/data/home"
       fields:
         - { label: "Tagline", name: "tagline", widget: "string" }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Button URL", name: "btnUrl", widget: "string" }
+        - { label: "Button Text", name: "btnText", widget: "string" }
         - { label: "Featured Photo", name: "Headshot", widget: "image" }
+
+    - name: "event.md"  # This should be the name of your file
+      label: "Event"
+      file: "src/data/home"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Description", name: "desc", widget: "string" }
+        - { label: "Button Text", name: "btnText", widget: "string" }
+        - { label: "Featured Photo", name: "img", widget: "image" }
+
+    - name: "story.md"
+      label: "Story"
+      file: "src/data/home"
+      create: false
+      # slug: "story.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Super Title", name: "supTitle", widget: "string" }
+
+  - label: "Story Cards"
+    name: "storyCards"
+    folder: "src/data/home/story"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
+    fields:
+      - { label: "Featured Image", name: "imgUrl", widget: "image" }
+      - { label: "Poster Title", name: "posterTitle", widget: "string" }
+      - { label: "Poster Description", name: "posterDesc", widget: "string" }
+      - { label: "Date", name: "Date", widget: "datetime" }
 
   - name: "about"
     label: "About Us"
@@ -43,24 +73,4 @@ collections:
       - { label: "Image URL", name: "imgUrl", widget: "string" }
       - { label: "Playlist Id", name: "playlistId", widget: "string" }
 
-  - name: "story"
-    label: "Story"
-    identifier_field: name
-    folder: "src/data"
-    create: false
-    slug: "story.md"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Super Title", name: "supTitle", widget: "string" }
-
-  - label: "Story Cards"
-    name: "storyCards"
-    identifier_field: name
-    folder: "src/data/story"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}"
-    fields:
-      - { label: "Featured Image", name: "imgUrl", widget: "image" }
-      - { label: "Poster Title", name: "posterTitle", widget: "string" }
-      - { label: "Poster Description", name: "posterDesc", widget: "string" }
-      - { label: "Date", name: "Date", widget: "datetime" }
+  

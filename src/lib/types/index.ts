@@ -12,6 +12,13 @@ export interface Hero {
 	Headshot: string;
 }
 
+export interface Event{
+		title:string;
+		desc:string;
+		btnText:string;
+		img:string;
+	}
+
 export interface AboutMeData {
 	title: string;
 	description: string;

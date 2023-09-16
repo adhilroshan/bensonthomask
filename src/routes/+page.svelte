@@ -12,12 +12,12 @@
 <svelte:head>
 	<title>Home | Benson Thomas</title>
 </svelte:head>
-<Hero heroData={data.hero} />
+<Hero heroData={data.home.hero} />
 <Services />
-<Events />
+<Events events={data.home.events} />
 <br />
 <br />
 <Showcase />
-<Story data={data.story} />
+<Story data={data.home} />
 <Testimonials />
 <Footer />

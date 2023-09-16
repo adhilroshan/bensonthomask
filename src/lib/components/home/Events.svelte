@@ -4,18 +4,22 @@
   This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
 -->
 
-<script>
+<script lang="ts">
 	import { Variant } from '$lib/types';
 	import Button from '../global/Button.svelte';
+	import type { Event } from '$lib/types';
+
+	export let events: Event;
 	export let reverse = false;
 
-	let title = 'Mission Worship Team - 2018';
-	let desc = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
-				sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-				quisque ut interdum tincidunt duis.`;
-	let btnText = 'Get Started Today';
-	let img =
-		'https://dev.bensonthomask.com/wp-content/uploads/2023/06/Screenshot-2023-06-01-at-6.59.31-AM.png';
+	const { title, desc, btnText, img } = events;
+	// let title = 'Mission Worship Team - 2018';
+	// let desc = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
+	// 			sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
+	// 			quisque ut interdum tincidunt duis.`;
+	// let btnText = 'Get Started Today';
+	// let img =
+	// 	'https://dev.bensonthomask.com/wp-content/uploads/2023/06/Screenshot-2023-06-01-at-6.59.31-AM.png';
 </script>
 
 {#if reverse}
