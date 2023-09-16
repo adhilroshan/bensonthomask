@@ -43,8 +43,8 @@ async function getStoryData() {
 export async function GET() {
 	const story = await getStory();
 	const storyData = await getStoryData();
-	return {
-		story:json(story),
-		storyData:json(storyData)
-	};
+	return json({
+		story,
+		storyData
+	});
 }
