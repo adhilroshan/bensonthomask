@@ -9,15 +9,17 @@ public_folder: "/uploads"
 collections:
   - name: "hero"
     label: "Hero"
-    identifier_field: name
     # folder: "src/data"
     create: false
-    files: ["src/data/hero.md"]
-    fields:
-      - { label: "Tagline", name: "tagline", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Button URL", name: "btnUrl", widget: "string" }
-      - { label: "Featured Photo", name: "Headshot", widget: "image" }
+    files: 
+    - name: "hero.md"  # This should be the name of your file
+      label: "Hero"
+      file: "src/data"
+      fields:
+        - { label: "Tagline", name: "tagline", widget: "string" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Button URL", name: "btnUrl", widget: "string" }
+        - { label: "Featured Photo", name: "Headshot", widget: "image" }
 
   - name: "about"
     label: "About Us"
