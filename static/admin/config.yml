@@ -10,9 +10,9 @@ collections:
   - name: "hero"
     label: "Hero"
     identifier_field: name
-    folder: "src/data/hero.md"
+    # folder: "src/data"
     create: false
-    # slug: "hero.md"
+    files: ["src/data/hero.md"]
     fields:
       - { label: "Tagline", name: "tagline", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
