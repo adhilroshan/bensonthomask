@@ -10,9 +10,9 @@ collections:
   - name: "home"
     label: "Home Page"
     # folder: "src/data"
-    create: false
     files: 
     - name: "hero.md"  # This should be the name of your file
+      create: false
       label: "Hero"
       file: "src/data/home"
       fields:
@@ -23,6 +23,7 @@ collections:
         - { label: "Featured Photo", name: "Headshot", widget: "image" }
 
     - name: "event.md"  # This should be the name of your file
+      create: false
       label: "Event"
       file: "src/data/home"
       fields:
