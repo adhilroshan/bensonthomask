@@ -18,6 +18,6 @@
 <br />
 <br />
 <Showcase />
-<Story />
+<Story data={data.story} />
 <Testimonials />
 <Footer />

@@ -1,51 +1,61 @@
-<script>
+<script lang="ts">
+	import type { Story, StoryData } from '$lib/types';
 	import { slide } from 'svelte/transition';
-	let supTitle = 'Veniam nostrud officia eu dolor enim.';
-	let title = 'Non consequat qui eiusmod magna ipsum tempor.';
-	// let imgUrl = 'https://dev.bensonthomask.com/wp-content/uploads/2023/06/moses.png';
-	// lets posterTitle = 'Amet et elit exercitation.';
-	// let posterDesc = `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
+
+	interface Data {
+		story: Story;
+		storyData: StoryData[];
+	}
+
+	export let data: Data;
+
+	const { supTitle, title } = data.story;
+
+	const poster = data.storyData;
+
+	// let supTitle = 'Veniam nostrud officia eu dolor enim.';
+	// let title = 'Non consequat qui eiusmod magna ipsum tempor.';
+
+	// let poster = [
+	// 	{
+	// 		imgUrl: 'https://dev.bensonthomask.com/wp-content/uploads/2023/06/moses.png',
+	// 		posterTitle: 'Amet et elit exercitation.',
+	// 		posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
 	// 					libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
-	// 					assumenda”.`;
-	let poster = [
-		{
-			imgUrl: 'https://dev.bensonthomask.com/wp-content/uploads/2023/06/moses.png',
-			posterTitle: 'Amet et elit exercitation.',
-			posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
-						libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
-						assumenda”.`
-		},
-		{
-			imgUrl:
-				'https://dev.bensonthomask.com/wp-content/uploads/2023/06/Screenshot-2023-06-01-at-6.59.31-AM.png',
-			posterTitle: 'Amet et elit exercitation.',
-			posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
-						libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
-						assumenda”.`
-		},
-		{
-			imgUrl: 'https://dev.bensonthomask.com/wp-content/uploads/2023/06/moses.png',
-			posterTitle: ' elit exercitation.',
-			posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
-						libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
-						assumenda”.`
-		},
-		{
-			imgUrl: 'https://dev.bensonthomask.com/wp-content/uploads/2023/06/moses.png',
-			posterTitle: 'et elit exercitation.',
-			posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
-						libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
-						assumenda”.`
-		},
-		{
-			imgUrl:
-				'https://dev.bensonthomask.com/wp-content/uploads/2023/06/Screenshot-2023-06-01-at-6.59.31-AM.png',
-			posterTitle: 'Amet et elit.',
-			posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
-						libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
-						assumenda”.`
-		}
-	];
+	// 					assumenda”.`
+	// 	},
+	// 	{
+	// 		imgUrl:
+	// 			'https://dev.bensonthomask.com/wp-content/uploads/2023/06/Screenshot-2023-06-01-at-6.59.31-AM.png',
+	// 		posterTitle: 'Amet et elit exercitation.',
+	// 		posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
+	// 					libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
+	// 					assumenda”.`
+	// 	},
+	// 	{
+	// 		imgUrl: 'https://dev.bensonthomask.com/wp-content/uploads/2023/06/moses.png',
+	// 		posterTitle: ' elit exercitation.',
+	// 		posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
+	// 					libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
+	// 					assumenda”.`
+	// 	},
+	// 	{
+	// 		imgUrl: 'https://dev.bensonthomask.com/wp-content/uploads/2023/06/moses.png',
+	// 		posterTitle: 'et elit exercitation.',
+	// 		posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
+	// 					libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
+	// 					assumenda”.`
+	// 	},
+	// 	{
+	// 		imgUrl:
+	// 			'https://dev.bensonthomask.com/wp-content/uploads/2023/06/Screenshot-2023-06-01-at-6.59.31-AM.png',
+	// 		posterTitle: 'Amet et elit.',
+	// 		posterDesc: `“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quibusdam ducimus
+	// 					libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
+	// 					assumenda”.`
+	// 	}
+	// ];
+
 	let count = 0;
 	let isDisabledL = false;
 	let isDisabledR = false;
