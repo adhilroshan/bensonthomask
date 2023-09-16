@@ -15,7 +15,7 @@
 						libero ad tempora doloribus expedita laborum saepe voluptas perferendis delectus
 						assumenda”.`
 		},
-		{
+		{co
 			imgUrl:
 				'https://dev.bensonthomask.com/wp-content/uploads/2023/06/Screenshot-2023-06-01-at-6.59.31-AM.png',
 			posterTitle: 'Amet et elit exercitation.',
