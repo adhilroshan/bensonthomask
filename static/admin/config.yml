@@ -7,40 +7,61 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "home"
-    label: "Home Page"
-    # folder: "src/data"
-    files: 
-    - name: "hero.md"  # This should be the name of your file
-      create: false
-      label: "Hero"
-      file: "src/data/home"
-      fields:
-        - { label: "Tagline", name: "tagline", widget: "string" }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Button URL", name: "btnUrl", widget: "string" }
-        - { label: "Button Text", name: "btnText", widget: "string" }
-        - { label: "Featured Photo", name: "Headshot", widget: "image" }
-
-    - name: "event.md"  # This should be the name of your file
-      create: false
-      label: "Event"
-      file: "src/data/home"
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Description", name: "desc", widget: "string" }
-        - { label: "Button Text", name: "btnText", widget: "string" }
-        - { label: "Featured Photo", name: "img", widget: "image" }
-
-    - name: "story.md"
-      label: "Story"
-      file: "src/data/home"
-      create: false
-      # slug: "story.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Super Title", name: "supTitle", widget: "string" }
-
+  - name: home
+    label: Home Page
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: src/data/home/home.yml
+        media_library:
+          folder_support: true
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: description
+            label: Description
+            widget: string
+          - name: btnUrl
+            label: Button URL
+            widget: string
+          - name: btnText
+            label: Button Text
+            widget: string
+          - name: img
+            label: Featured Photo
+            widget: image
+      - name: "event"
+        label: "Event"
+        file: src/data/home/event.yml
+        media_library:
+          folder_support: true
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: desc
+            label: Description
+            widget: string
+          - name: btnText
+            label: Button Text
+            widget: string
+          - name: img
+            label: Featured Photo
+            widget: image
+      - name: "story"
+        label: "Story"
+        file: src/data/home/story.yml
+        media_library:
+          folder_support: true
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: supTitle
+            label: Super Title
+            widget: string
+        
   - label: "Story Cards"
     name: "storyCards"
     folder: "src/data/home/story"
@@ -52,25 +73,59 @@ collections:
       - { label: "Poster Description", name: "posterDesc", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
 
-  - name: "about"
-    label: "About Us"
-    folder: "src/data"
-    create: false
-    slug: "about.md"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Background Color", name: "bgColor", widget: "string" }
-      - { label: "Background Image", name: "bgImg", widget: "image" }
-
-  - name: "church"
-    label: "Church"
-    folder: "src/data"
-    create: false
-    slug: "church.md"
-    fields:
-      - { label: "Image URL", name: "imgUrl", widget: "string" }
-      - { label: "Playlist Id", name: "playlistId", widget: "string" }
+  - name: about
+    label: About Page
+    files:
+      - name: about
+        label: About Page
+        file: src/data/about/about.yml
+        media_library:
+          folder_support: true
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: description
+            label: Description
+            widget: string
+          - name: bgColor
+            label: Background Color
+            widget: string
+          - name: bgImg
+            label: Background Image
+            widget: image
+          # - name: intro
+          #   label: Intro
+          #   widget: markdown
+            
+          # - name: team
+          #   label: Team
+          #   widget: list
+          #   fields:
+          #     - name: name
+          #       label: Name
+          #       widget: string
+          #     - name: position
+          #       label: Position
+          #       widget: string
+          #     - name: photo
+          #       label: Photo
+          #       widget: image
+  - name: church
+    label: Church Page
+    files:
+      - name: church
+        label: Church Page
+        file: src/data/church/church.yml
+        media_library:
+          folder_support: true
+        fields:
+          - name: imgUrl
+            label: Image URL
+            widget: string
+          - name: playlistId
+            label: Playlist ID
+            widget: string        
 
   - name: "events" # Used in routes, e.g., /admin/collections/blog
     label: "Events" # Used in the UI
@@ -84,6 +139,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      
       # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
 
   

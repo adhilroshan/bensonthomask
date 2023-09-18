@@ -14,11 +14,11 @@ export interface Home {
 }
 
 export interface Hero {
-	tagline: string;
+	title: string;
 	description: string;
 	btnText: string;
 	btnUrl: string;
-	Headshot: string;
+	img: string;
 }
 
 export interface Event {
