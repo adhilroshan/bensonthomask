@@ -39,6 +39,7 @@
 		"@splidejs/svelte-splide": "^0.2.9",
 		"bits-ui": "^0.0.33",
 		"clsx": "^2.0.0",
+		"fast-average-color": "^9.4.0",
 		"lucide-svelte": "^0.268.0",
 		"svelte-fa": "^3.0.4",
 		"tailwind-merge": "^1.14.0",

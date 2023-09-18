@@ -1,8 +1,20 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/global/PageHeader.svelte';
 	import { formatDate } from '$lib/utils';
+	import { FastAverageColor } from 'fast-average-color';
 
 	export let data;
+
+	let bgColor: string;
+	const fac = new FastAverageColor();
+	fac
+		.getColorAsync(data.meta.thumbnail)
+		.then((color) => {
+			bgColor = color.rgba;
+		})
+		.catch((e) => {
+			console.log(e);
+		});
 </script>
 
 <!-- SEO -->
@@ -13,7 +25,7 @@
 </svelte:head>
 
 <article>
-	<PageHeader title={data.meta.title} bgImg={data.meta.thumbnail} />
+	<PageHeader title={data.meta.title} bgImg={data.meta.thumbnail} {bgColor} />
 	<!-- Title -->
 	<hgroup>
 		<h1>{data.meta.title}</h1>

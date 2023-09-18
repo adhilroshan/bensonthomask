@@ -40,7 +40,7 @@
 				: 'justify-between gap-8'} px-10 items-center"
 		>
 			<div class="z-10">
-				<h2 style="color: {textColor};" class="text-3xl text-center font-bold sm:text-4xl">
+				<h2 style="color: {textColor}; " class="text-3xl text-center font-bold sm:text-4xl">
 					{title}
 				</h2>
 
