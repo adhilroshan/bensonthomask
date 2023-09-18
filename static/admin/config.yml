@@ -12,7 +12,7 @@ collections:
     files:
       - name: "hero"
         label: "Hero"
-        file: src/data/home/home.yml
+        file: src/data/home/home.json
         media_library:
           folder_support: true
         fields:
@@ -33,7 +33,7 @@ collections:
             widget: image
       - name: "event"
         label: "Event"
-        file: src/data/home/event.yml
+        file: src/data/home/event.json
         media_library:
           folder_support: true
         fields:
@@ -51,7 +51,7 @@ collections:
             widget: image
       - name: "story"
         label: "Story"
-        file: src/data/home/story.yml
+        file: src/data/home/story.json
         media_library:
           folder_support: true
         fields:
@@ -78,7 +78,7 @@ collections:
     files:
       - name: about
         label: About Page
-        file: src/data/about/about.yml
+        file: src/data/about/about.json
         media_library:
           folder_support: true
         fields:
