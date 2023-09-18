@@ -3,8 +3,8 @@
 	import { Variant } from '$lib/types';
 
 	export let heroData: Hero;
-	const Headshot = heroData.Headshot;
-	const tagline = heroData.tagline;
+	const Headshot = heroData.img;
+	const tagline = heroData.title;
 	const description = heroData.description;
 	import Button from '../global/Button.svelte';
 	var CTA = {
