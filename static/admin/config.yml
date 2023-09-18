@@ -10,8 +10,8 @@ collections:
   - name: home
     label: Home Page
     files:
-      - name: "home"
-        label: "Home Page"
+      - name: "hero"
+        label: "Hero"
         file: src/data/home/home.yml
         media_library:
           folder_support: true
@@ -116,7 +116,7 @@ collections:
     files:
       - name: church
         label: Church Page
-        file: src/data/church/church.yml
+        file: src/data/church/church.json
         media_library:
           folder_support: true
         fields:
