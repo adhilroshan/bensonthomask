@@ -1,8 +1,5 @@
 import { json } from '@sveltejs/kit';
-import fs from 'fs';
-import YAML from 'yaml';
-
-// import type { ChurchData } from '$lib/types';
+import type { ChurchData } from '$lib/types';
 // const path = '/src/data/church/church.md';
 
 // interface File {
@@ -16,12 +13,8 @@ import YAML from 'yaml';
 // }
 async function getChurch() {
 	const paths = import.meta.glob('/src/data/church/church.json', { eager: true });
-	// const paths = import.meta.glob('./church.yml', { eager: true });
-	// const paths = fs.readFileSync('../../../data/church/church.md', 'utf8');
-	// return YAML.parse(paths);
-	return paths;
-	// const file = paths[path] as File;
-	// return file.metadata;
+	const file = paths['/src/data/church/church.json'] as ChurchData;
+	return file;
 }
 
 export async function GET() {

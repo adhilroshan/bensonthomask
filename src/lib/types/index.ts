@@ -50,6 +50,7 @@ export interface AboutMeData {
 }
 export interface ChurchData {
 	imgUrl: string;
+	text: string;
 	playlistId: string;
 }
 

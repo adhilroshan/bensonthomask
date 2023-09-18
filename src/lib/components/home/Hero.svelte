@@ -11,7 +11,7 @@
 		url: heroData.btnUrl,
 		text: heroData.btnText
 	};
-	// import Headshot from '$lib/assets/benson3.png';
+	import img from '$lib/assets/benson3.png';
 	// import Bg from '$lib/assets/bg.jpg';
 	// let tagline: string = 'Benson Thomas K';
 	// let tagline: string = 'I WILL SING TO THE LORD FOR HE IS GOOD HIS MERCIES ENDURETH FOREVER';
@@ -50,7 +50,13 @@
 							style="inset: auto 0 0; "
 							class="border-b-4 border-r-4 border-borderColor z-30 aspect-square rounded-tl-[80px] rounded-br-[80px] absolute mx-auto w-full object-cover"
 						/>
-						<img alt="Headshot" src={Headshot} class="relative z-20 rounded-br-[80px]" />
+						{#if Headshot}
+							 <!-- content here -->
+							 <img alt="Headshot" src={Headshot} class="relative z-20 rounded-br-[80px]" />
+							 {:else}
+							 <img alt="Headshot" src={img} class="relative z-20 rounded-br-[80px]" />
+							 <!-- else content here -->
+						{/if}
 					</div>
 				</div>
 			</div>

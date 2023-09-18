@@ -122,7 +122,10 @@ collections:
         fields:
           - name: imgUrl
             label: Image URL
-            widget: string
+            widget: image
+          - name: text
+            label: Text
+            widget: string        
           - name: playlistId
             label: Playlist ID
             widget: string        
