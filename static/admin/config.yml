@@ -12,7 +12,7 @@ collections:
     files:
       - name: "hero"
         label: "Hero"
-        file: src/data/home/home.json
+        file: src/data/home/hero.json
         media_library:
           folder_support: true
         fields:
