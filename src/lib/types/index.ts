@@ -4,6 +4,15 @@ export enum Variant {
 	partiallyRounded
 }
 
+/* Home Page */
+/* ------------------------------------------------------------------------ */
+export interface Home {
+	heros: Hero;
+	events: Event;
+	story: Story;
+	storyData: StoryData[];
+}
+
 export interface Hero {
 	tagline: string;
 	description: string;
@@ -12,12 +21,25 @@ export interface Hero {
 	Headshot: string;
 }
 
-export interface Event{
-		title:string;
-		desc:string;
-		btnText:string;
-		img:string;
-	}
+export interface Event {
+	title: string;
+	desc: string;
+	btnText: string;
+	img: string;
+}
+
+export interface Story {
+	supTitle: string;
+	title: string;
+	date: string;
+}
+export interface StoryData {
+	imgUrl: string;
+	posterTitle: string;
+	posterDesc: string;
+	date: string;
+	slug: string;
+}
 
 export interface AboutMeData {
 	title: string;
@@ -30,15 +52,15 @@ export interface ChurchData {
 	imgUrl: string;
 	playlistId: string;
 }
-export interface Story {
-	supTitle: string;
-	title: string;
-	date: string;
-}
-export interface StoryData {
+
+/* Events Page */
+export interface Events {
+	layout: string;
 	slug: string;
-	imgUrl: string;
-	posterTitle: string;
-	posterDesc: string;
+	title: string;
+	description: string;
 	date: string;
+	thumbnail: string;
+	published: boolean;
+	body: string;
 }

@@ -50,11 +50,10 @@ collections:
       - { label: "Featured Image", name: "imgUrl", widget: "image" }
       - { label: "Poster Title", name: "posterTitle", widget: "string" }
       - { label: "Poster Description", name: "posterDesc", widget: "string" }
-      - { label: "Date", name: "Date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime" }
 
   - name: "about"
     label: "About Us"
-    identifier_field: name
     folder: "src/data"
     create: false
     slug: "about.md"
@@ -66,12 +65,25 @@ collections:
 
   - name: "church"
     label: "Church"
-    identifier_field: name
     folder: "src/data"
     create: false
     slug: "church.md"
     fields:
       - { label: "Image URL", name: "imgUrl", widget: "string" }
       - { label: "Playlist Id", name: "playlistId", widget: "string" }
+
+  - name: "events" # Used in routes, e.g., /admin/collections/blog
+    label: "Events" # Used in the UI
+    folder: "src/data/events" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "event"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
 
   
