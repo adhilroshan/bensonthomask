@@ -141,5 +141,14 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       
       # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-
+  - name: auth
+    label: Authentication
+    files:
+      - name: api
+        label: API Keys
+        file: src/data/auth/key.json
+        fields:
+          - name: API_KEY
+            label: API KEY
+            widget: string
   
