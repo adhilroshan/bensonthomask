@@ -20,10 +20,10 @@ const config = {
 		alias: {
 			$data: './src/data'
 		},
-		// prerender:{
-		// 	crawl:true,
+		prerender:{
+			crawl:true,
 			
-		// }
+		}
 	},
 	extensions: ['.svelte', '.md']
 };
