@@ -197,8 +197,8 @@
 				>
 					<h1 class="text-xl font-medium text-bgclight dark:text-gray-200">Contact form</h1>
 
-					<form class="mt-4" method="POST" netlify >
-						<input type="hidden" name="form-name" value="name_of_my_form" />
+					<form class="mt-4" name='contact' method="POST" netlify >
+						<input type="hidden" name="form-name" value='contact' />
 
 						<div class="flex-1">
 							<label for="name" class="block mb-2 text-sm text-bgc dark:text-gray-200"
