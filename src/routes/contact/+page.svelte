@@ -6,25 +6,25 @@
 	let loc: string;
 	let email = 'acb@example.com';
 	let phone = '(257) 563-7401';
-	// const handleSubmit = (event: Event) => {
-	// 	event.preventDefault();
+	const handleSubmit = (event: Event) => {
+		event.preventDefault();
 
-	// 	const myForm = event.target as HTMLFormElement;
-	// 	const formData = new FormData(myForm);
+		const myForm = event.target as HTMLFormElement;
+		const formData = new FormData(myForm);
 
-	// 	// Convert FormData to a URL-encoded string manually
-	// 	const urlEncodedData = Array.from(formData)
-	// 		.map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value as string))
-	// 		.join('&');
+		// Convert FormData to a URL-encoded string manually
+		const urlEncodedData = Array.from(formData)
+			.map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value as string))
+			.join('&');
 
-	// 	fetch('/', {
-	// 		method: 'POST',
-	// 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-	// 		body: urlEncodedData
-	// 	})
-	// 		.then(() => console.log('Form successfully submitted'))
-	// 		.catch((error) => alert(error));
-	// };
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: urlEncodedData
+		})
+			.then(() => console.log('Form successfully submitted'))
+			.catch((error) => alert(error));
+	};
 
 	// loc = 'Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522';
 </script>
@@ -197,7 +197,7 @@
 				>
 					<h1 class="text-xl font-medium text-bgclight dark:text-gray-200">Contact form</h1>
 
-					<form class="mt-4" method="POST" netlify>
+					<form class="mt-4" method="POST" netlify >
 						<input type="hidden" name="form-name" value="name_of_my_form" />
 
 						<div class="flex-1">
