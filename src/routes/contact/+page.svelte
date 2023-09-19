@@ -1,5 +1,5 @@
 <script lang="ts">
-	export const prerender = true;
+	// export const prerender = true;
 
 	let title = 'Get a quote';
 	let desc = 'Ask us everything and we would love to hear from you';
@@ -197,7 +197,9 @@
 				>
 					<h1 class="text-xl font-medium text-bgclight dark:text-gray-200">Contact form</h1>
 
-					<form class="mt-4" method="POST" data-netlify="true">
+					<form class="mt-4" method="POST" netlify>
+						<input type="hidden" name="form-name" value="name_of_my_form" />
+
 						<div class="flex-1">
 							<label for="name" class="block mb-2 text-sm text-bgc dark:text-gray-200"
 								>Full Name</label
