@@ -4,7 +4,7 @@
 	import type { Events } from '$lib/types';
 
 	export let data;
-	const events: Events[] = data.events.events;
+	const events: Events[] = data.events;
 	// console.log(data.events.events);
 
 	let bgImg =

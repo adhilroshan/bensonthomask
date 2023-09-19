@@ -15,7 +15,7 @@ async function getEvents() {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Events, 'slug'>;
 			const event = { ...metadata, slug } satisfies Events;
-			event.published && events.push(event);
+			!event.draft && events.push(event);
 		}
 	}
 

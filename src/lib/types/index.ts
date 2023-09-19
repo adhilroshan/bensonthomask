@@ -62,6 +62,6 @@ export interface Events {
 	description: string;
 	date: string;
 	thumbnail: string;
-	published: boolean;
+	draft: boolean;
 	body: string;
 }
