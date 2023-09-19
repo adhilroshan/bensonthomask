@@ -4,6 +4,26 @@
 	let loc: string;
 	let email = 'acb@example.com';
 	let phone = '(257) 563-7401';
+	const handleSubmit = (event: Event) => {
+		event.preventDefault();
+
+		const myForm = event.target as HTMLFormElement;
+		const formData = new FormData(myForm);
+
+		// Convert FormData to a URL-encoded string manually
+		const urlEncodedData = Array.from(formData)
+			.map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value as string))
+			.join('&');
+
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: urlEncodedData
+		})
+			.then(() => console.log('Form successfully submitted'))
+			.catch((error) => alert(error));
+	};
+
 	// loc = 'Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522';
 </script>
 
@@ -215,6 +235,7 @@
 						</div>
 
 						<button
+							on:click={handleSubmit}
 							type="submit"
 							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-text capitalize transition-all duration-300 transform bg-bgc rounded-md hover:bg-text hover:text-bgc border active:scale-95 border-bgc focus:outline-none focus:ring focus:ring-bgc focus:ring-opacity-50"
 						>
