@@ -166,6 +166,33 @@ collections:
         - name: excluded
           label: Excluded List
           widget: list
+  - name: 'contacts'
+    label: 'contacts Page'
+    files:
+    - name: 'contact'
+      label: 'Contacts'
+      file: "/src/data/contact/contact.json"
+      widget: list
+      create: true
+      fields:
+        - name: title
+          label: Title
+          widget: string
+        - name: desc
+          label: Description
+          widget: string
+        - name: email
+          label: string
+          widget: string
+        - name: phone
+          label: Phone
+          widget: number
+        - name: loc
+          label: Loc
+          widget: map
+          default: ''
+          
+  
 
   - name: auth
     label: Authentication
