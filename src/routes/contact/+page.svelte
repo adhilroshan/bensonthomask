@@ -195,9 +195,11 @@
 				>
 					<h1 class="text-xl font-medium text-bgclight dark:text-gray-200">Contact form</h1>
 
-					<form class="mt-4" name="contact" method="POST" data-netlify="true">
+					<form class="mt-4" method="POST" data-netlify="true">
 						<div class="flex-1">
-							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Full Name</label>
+							<label for="name" class="block mb-2 text-sm text-bgc dark:text-gray-200"
+								>Full Name</label
+							>
 							<input
 								name="name"
 								type="text"
@@ -207,7 +209,9 @@
 						</div>
 
 						<div class="flex-1 mt-6">
-							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Email address</label>
+							<label for="email" class="block mb-2 text-sm text-bgc dark:text-gray-200"
+								>Email address</label
+							>
 							<input
 								type="email"
 								name="email"
@@ -216,7 +220,8 @@
 							/>
 						</div>
 						<div class="flex-1 mt-6">
-							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Phone</label>
+							<label for="phone" class="block mb-2 text-sm text-bgc dark:text-gray-200">Phone</label
+							>
 							<input
 								type="tel"
 								name="phone"
@@ -226,13 +231,17 @@
 						</div>
 
 						<div class="w-full mt-6">
-							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Message</label>
+							<label for="message" class="block mb-2 text-sm text-bgc dark:text-gray-200"
+								>Message</label
+							>
 							<textarea
 								name="message"
 								class="block w-full h-32 px-5 py-3 mt-2 text-borderColor placeholder-gray-400 bg-texttext-text border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 								placeholder="Message"
 							/>
 						</div>
+
+						<div data-netlify-recaptcha="true" />
 
 						<input
 							type="button"
