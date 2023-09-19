@@ -167,7 +167,7 @@ collections:
           label: Excluded List
           widget: list
   - name: 'contacts'
-    label: 'contacts Page'
+    label: 'Contacts Page'
     files:
     - name: 'contact'
       label: 'Contacts'
@@ -182,14 +182,14 @@ collections:
           label: Description
           widget: string
         - name: email
-          label: string
+          label: Email
           widget: string
         - name: phone
           label: Phone
           widget: number
         - name: loc
           label: Loc
-          widget: map
+          widget: string
           default: ''
           
   
