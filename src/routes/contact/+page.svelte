@@ -245,20 +245,19 @@
 							/>
 						</div>
 
-						<div data-netlify-recaptcha="true" />
+						<div class="my-2" data-netlify-recaptcha="true" />
 
-						<input
+						<!-- <input
 							type="button"
 							value="get in touch"
 							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-text capitalize transition-all duration-300 transform bg-bgc rounded-md hover:bg-text hover:text-bgc border active:scale-95 border-bgc focus:outline-none focus:ring focus:ring-bgc focus:ring-opacity-50"
-						/>
-						<!-- <button
-							on:click={handleSubmit}
+						/> -->
+						<button
 							type="submit"
 							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-text capitalize transition-all duration-300 transform bg-bgc rounded-md hover:bg-text hover:text-bgc border active:scale-95 border-bgc focus:outline-none focus:ring focus:ring-bgc focus:ring-opacity-50"
 						>
 							get in touch
-						</button> -->
+						</button>
 					</form>
 				</div>
 			</div>
