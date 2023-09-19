@@ -149,6 +149,7 @@ collections:
     label: 'Media'
     folder: "/src/data/media"
     widget: list
+    create: true
     fields:
       - name: sorted-list
         label: Sorted List
