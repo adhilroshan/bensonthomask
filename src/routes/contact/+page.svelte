@@ -175,10 +175,11 @@
 				>
 					<h1 class="text-xl font-medium text-bgclight dark:text-gray-200">Contact form</h1>
 
-					<form class="mt-4">
+					<form class="mt-4" name="contact" method="POST" data-netlify="true">
 						<div class="flex-1">
 							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Full Name</label>
 							<input
+								name="name"
 								type="text"
 								placeholder="John Doe"
 								class="block w-full px-5 py-3 mt-2 text-borderColor bg-texttext-text border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -189,6 +190,7 @@
 							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Email address</label>
 							<input
 								type="email"
+								name="email"
 								placeholder="johndoe@example.com"
 								class="block w-full px-5 py-3 mt-2 text-borderColor bg-texttext-text border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
@@ -197,6 +199,7 @@
 							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Phone</label>
 							<input
 								type="tel"
+								name="phone"
 								placeholder="(257) 563-7401"
 								class="block w-full px-5 py-3 mt-2 text-borderColor bg-texttext-text border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 							/>
@@ -205,12 +208,14 @@
 						<div class="w-full mt-6">
 							<label class="block mb-2 text-sm text-bgc dark:text-gray-200">Message</label>
 							<textarea
+								name="message"
 								class="block w-full h-32 px-5 py-3 mt-2 text-borderColor placeholder-gray-400 bg-texttext-text border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-bgc focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
 								placeholder="Message"
 							/>
 						</div>
 
 						<button
+							type="submit"
 							class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-text capitalize transition-all duration-300 transform bg-bgc rounded-md hover:bg-text hover:text-bgc border active:scale-95 border-bgc focus:outline-none focus:ring focus:ring-bgc focus:ring-opacity-50"
 						>
 							get in touch
