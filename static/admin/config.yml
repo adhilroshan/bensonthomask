@@ -186,11 +186,11 @@ collections:
           widget: string
         - name: phone
           label: Phone
-          widget: number
+          widget: string
         - name: loc
           label: Loc
           widget: string
-          default: ''
+          required: false
           
   
 
