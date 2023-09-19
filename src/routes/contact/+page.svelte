@@ -1,4 +1,6 @@
 <script lang="ts">
+	export const prerender = true;
+
 	let title = 'Get a quote';
 	let desc = 'Ask us everything and we would love to hear from you';
 	let loc: string;

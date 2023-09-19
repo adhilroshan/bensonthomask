@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 
@@ -19,7 +19,11 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$data: './src/data'
-		}
+		},
+		// prerender:{
+		// 	crawl:true,
+			
+		// }
 	},
 	extensions: ['.svelte', '.md']
 };
