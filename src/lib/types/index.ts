@@ -65,3 +65,10 @@ export interface Events {
 	draft: boolean;
 	body: string;
 }
+
+export interface MediaPageData {
+	title: string;
+	bgImg: string;
+	bgColor: string;
+	excluded: string[];
+}

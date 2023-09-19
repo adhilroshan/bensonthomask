@@ -5,6 +5,7 @@
 	import { API_KEY, CHANNEL_ID } from '$lib/auth/key';
 	import PageHeader from '$lib/components/global/PageHeader.svelte';
 	import { blur, fade } from 'svelte/transition';
+	import type { MediaPageData } from '$lib/types';
 
 	interface Playlist {
 		playlistId: string;
@@ -12,6 +13,8 @@
 		playlistThumbnailUrl: string;
 	}
 
+	export let data;
+	const { bgColor, bgImg, excluded, title }: MediaPageData = data.media;
 	let playlists: Playlist[] = [];
 	let excludedPlaylists: Playlist[];
 	let nextbtn: boolean = false;
@@ -55,10 +58,11 @@
 					'SONGS OF WORSHIP [MALAYALAM]'
 				];
 
-				const NegativePlaylist: string[] = [
-					'The Lighthouse Church TLC',
-					'TEENAGE AND YOUTHFUL DAYS..!!'
-				];
+				// const NegativePlaylist: string[] = [
+				// 	'The Lighthouse Church TLC',
+				// 	'TEENAGE AND YOUTHFUL DAYS..!!'
+				// ];
+				const NegativePlaylist: string[] = excluded;
 				const sortedPlaylists = sortOrder.map((title) =>
 					fetchedPlaylists.find((playlist: Playlist) => playlist.playlistTitle.includes(title))
 				);
@@ -119,12 +123,7 @@
 	<title>Media | Benson Thomas</title>
 </svelte:head>
 
-<PageHeader
-	title="Media"
-	centerTitle
-	bgColor="#dec3a3"
-	bgImg="https://images.unsplash.com/photo-1507692049790-de58290a4334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-/>
+<PageHeader {title} centerTitle {bgColor} {bgImg} />
 
 <!-- <div
 	class="grid grid-cols-1 lg:lg:grid-cols-[repeat(2,1fr)] xl:grid-cols-[repeat(3,1fr)] gap-x-1 gap-y-1 place-items-center mx-4 md:mx-24"

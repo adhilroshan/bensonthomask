@@ -163,7 +163,7 @@ collections:
         - name: bgColor
           label: Background Color
           widget: color
-        - name: excluded-list
+        - name: excluded
           label: Excluded List
           widget: list
 
