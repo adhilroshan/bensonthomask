@@ -62,7 +62,7 @@
 	}
 </script>
 
-<div class="flex flex-col justify-center items-center overflow-hidden">
+<div id={idx.toString()} class="flex flex-col justify-center items-center overflow-hidden">
 	<h1 class="text-bgc mx-auto my-2 text-xl font-semibold font-lora">{playlist.playlistTitle}</h1>
 	<Splide
 		options={{
@@ -96,7 +96,7 @@
 	>
 		{#each playlistItems as item, i}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<SplideSlide class="h-60 aspect-video	 w-auto" key={i}>
+			<SplideSlide class="h-60 aspect-video w-auto" key={i}>
 				<!-- <img
 					class="w-full h-full object-cover"
 					src={item.snippet.thumbnails.default.url}

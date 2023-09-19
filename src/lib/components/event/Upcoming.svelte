@@ -18,7 +18,7 @@
 			</p>
 		</div>
 
-		<div class="flex flex-wrap gap-8 mt-8">
+		<div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2">
 			{#each events as event}
 				<a href={`events/${event.slug}`}>
 					<img

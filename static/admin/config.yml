@@ -90,7 +90,7 @@ collections:
             widget: string
           - name: bgColor
             label: Background Color
-            widget: string
+            widget: color
           - name: bgImg
             label: Background Image
             widget: image
@@ -139,11 +139,31 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "event"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
+      - {label: "Registration URL", name: "regUrl", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Body", name: "body", widget: "markdown"}
       
+  - name: 'media'
+    label: 'Media'
+    folder: "/src/data/media"
+    widget: list
+    fields:
+      - name: sorted-list
+        label: Sorted List
+        widget: string
+      - name: excluded-list
+        label: Excluded List
+        widget: list
+        fields:
+          - name: removed-list
+            label: Removed List
+            widget:
+              string
+          - name: rearranged
+            label: Reordered List
+            widget: string
       # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
   - name: auth
     label: Authentication
