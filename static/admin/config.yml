@@ -147,23 +147,26 @@ collections:
       
   - name: 'media'
     label: 'Media'
-    folder: "/src/data/media"
-    widget: list
-    create: true
-    fields:
-      - name: title
-        label: Title
-        widget: string
-      - name: bgImg
-        label: Background Image
-        widget: image
-      - name: bgColor
-        label: Background Color
-        widget: color
-      - name: excluded-list
-        label: Excluded List
-        widget: list
-      # - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+    files:
+    - name: 'media'
+      label: 'Media'
+      file: "/src/data/media/media.json"
+      widget: list
+      create: true
+      fields:
+        - name: title
+          label: Title
+          widget: string
+        - name: bgImg
+          label: Background Image
+          widget: image
+        - name: bgColor
+          label: Background Color
+          widget: color
+        - name: excluded-list
+          label: Excluded List
+          widget: list
+
   - name: auth
     label: Authentication
     files:
